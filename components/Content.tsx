@@ -44,7 +44,7 @@ const Content = () => {
       <div className='w-full border flex gap-5 border-red-500'>
         <div className='flex h-fit w-full justify-end gap-5 '>
           {first.map((item, index) => (
-            <div className='border'>{item}</div>
+            <div key={index} className='border'>{item}</div>
           ))}
         </div>
       </div>

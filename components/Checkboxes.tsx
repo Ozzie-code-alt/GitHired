@@ -25,6 +25,7 @@ const Checkboxes: React.FC<CheckboxesProps> = ({upData}) => {
       <div className='grid grid-cols-3 gap-2 w-fit '>
         {CHECKBOXES_CONSTANTS.map((item, index) => (
           <div
+          key={index}
             className='w-full px-2  
           border gap-2 rounded-full flex justify-center items-center'
           >
