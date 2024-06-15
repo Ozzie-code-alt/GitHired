@@ -24,3 +24,35 @@ export const LEFTNAV_CONSTANTS = [
     py: 'py-2'
   }
 ];
+
+
+export const CHECKBOXES_CONSTANTS = [
+  {
+    title: "Next JS"
+  },
+  {
+    title: "Astro"
+  },
+  {
+    title: "Prisma"
+  },
+  {
+    title: "MongoDB"
+  },
+  {
+    title: "React"
+  }
+
+]
+
+export const FOOTER_CONSTANTS = [
+  {
+    title: "About"
+  },
+  {
+    title: "Contact"
+  },
+  {
+    title: "PDF"
+  }
+]
