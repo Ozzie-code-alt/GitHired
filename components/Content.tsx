@@ -1,12 +1,15 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import LeftNav from './LeftNav';
 import Checkboxes from './Checkboxes';
 import Footer from './Footer';
 import { PROJECTS_CONSTANTS } from '@/constants/constants';
 import Image from 'next/image';
 
+
+
 const Content = () => {
+  
   const [first, setfirst] = useState<string[]>([]);
 
   const handleData = (data: string[]) => {
@@ -16,7 +19,7 @@ const Content = () => {
   return (
     <div className='w-full h-screen px-10 py-10 flex flex-col lg:flex-row'>
       {/*Left */}
-      <div className='w-[40%]] h-full border  border-red-500  '>
+      <div className='w-[40%]] h-full  '>
         <div className='pb-10'>
           <LeftNav />
         </div>
@@ -32,7 +35,7 @@ const Content = () => {
 
         <div className='border-2 border-dashed border-slate-500 mb-5' />
 
-        <div className='hidden lg:flex flex-col  justify-between w-full h-[67.4%] border border-blue-500'>
+        <div className='hidden lg:flex flex-col  justify-between w-full h-[67.4%] '>
           <div className=''>
             <Checkboxes upData={handleData} />
           </div>
@@ -43,39 +46,69 @@ const Content = () => {
         </div>
       </div>
       {/*Right */}
-      <div className='w-full border flex flex-col gap-5 px-10 lg:overflow-y-scroll overflow-x-hidden border-red-500'>
-        <div className='flex h-fit w-full transition duration-1000 ease-in-out justify-end gap-5 '>
-          {first.map((item, index) => (
-            <div key={index} className='border transition  duration-1000 ease-in-out'>
-              {item}
+      <div
+        id='smooth-wrapper'
+        className='w-full  flex flex-col gap-5 px-10 lg:overflow-y-scroll overflow-x-hidden '
+      >
+        {first.length > 0 ? (
+          <div id='smooth-content' className='px-10'>
+            <div className='flex h-fit w-full transition duration-1000 ease-in-out justify-end gap-5 '>
+              {first.map((item, index) => (
+                <div key={index} className='border transition  duration-1000 ease-in-out'>
+                  {item}
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
 
-        <div className='border   border-blue-500 flex flex-col gap-5 h-auto'>
-          {PROJECTS_CONSTANTS.map((item, index) => (
-            <div key={index} className='border relative rounded-lg h-auto'>
-              <Image
-                src={item.img}
-                alt='justin'
-                width={1080}
-                height={720}
-                className='object-cover  '
-              />
-              <div className='flex gap-5 border border-red-500 bottom-10 absolute '>
-                {item.tags.map((tag, index) => (
-                  <div key={index} className='flex'>{tag}</div>
-                ))}
-              </div>
-              <div className='flex justify-between px-5 w-full border border-green-500'>
-                <div className=''>{item.title}</div>
-                <div className=''>
-                  <button>View More</button>
+            <div className='border   border-blue-500 flex flex-col gap-5 h-auto'>
+              {PROJECTS_CONSTANTS.filter((item) =>
+                item.tags.some((tag) => first.includes(tag))
+              ).map((item, index) => (
+                <div key={index} className='border relative rounded-lg h-auto'>
+                  <Image
+                    src={item.img}
+                    alt='justin'
+                    width={1080}
+                    height={720}
+                    className='object-cover'
+                  />
+                  <div className='flex gap-5 border border-red-500 bottom-10 absolute'>
+                    {item.tags.join(', ')} {/* Join the tags array to display it as a string */}
+                  </div>
+                  <div className='flex justify-between px-5 w-full border border-green-500'>
+                    <div className=''>{item.title}</div>
+                    <div className=''>
+                      <button>View More</button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <div id='smooth-content' className='transition-all duration-500 px-10  ease-in-out'>
+            {PROJECTS_CONSTANTS.map((item, index) => (
+              <div key={index} className='border relative rounded-lg h-auto'>
+                <Image
+                  src={item.img}
+                  alt='justin'
+                  width={1080}
+                  height={720}
+                  className='object-cover'
+                />
+                <div className='flex gap-5 border border-red-500 bottom-10 absolute'>
+                  {item.tags.join(', ')} {/* Join the tags array to display it as a string */}
+                </div>
+                <div className='flex justify-between px-5 w-full border border-green-500'>
+                  <div className=''>{item.title}</div>
+                  <div className=''>
+                    <button>View More</button>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

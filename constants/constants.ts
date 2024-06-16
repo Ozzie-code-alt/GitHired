@@ -1,46 +1,59 @@
+import React from 'react';
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+
 export const LEFTNAV_CONSTANTS = [
   {
     title: 'Justin',
+    value: "1",
     bgColor: 'bg-[rgba(255,0,247,.3)]',
     borderColor: 'border-[rgba(255,0,246,.8)]',
     textColor: 'text-[#680045]',
     px: 'px-10',
-    py: 'py-2'
+    py: 'py-2',
+   
   },
   {
     title: 'Menu',
+    value: "2",
     bgColor: 'bg-[rgba(0,208,255,.1)]',
     borderColor: 'border-[#00eaff]',
     textColor: 'text-[#005f68]',
     px: 'px-10',
-    py: 'py-2'
+    py: 'py-2',
+    
   },
   {
     title: 'Projects',
+    value: "3",
     bgColor: 'bg-[rgba(0,255,17,.1)]',
     borderColor: 'border-[#0f1]',
     textColor: 'text-[#005205]',
     px: 'px-10',
-    py: 'py-2'
+    py: 'py-2',
   }
 ];
 
 
 export const CHECKBOXES_CONSTANTS = [
   {
-    title: "Next JS"
+    title: "Next JS",
+    value: "1" ,
   },
   {
-    title: "Astro"
+    title: "Astro",
+    value: "2" ,
   },
   {
-    title: "Prisma"
+    title: "Prisma",
+    value: "3" ,
   },
   {
-    title: "MongoDB"
+    title: "MongoDB",
+    value: "4" ,
   },
   {
-    title: "React"
+    title: "React",
+    value: "5" ,
   }
 
 ]

@@ -8,9 +8,9 @@ const Footer = () => {
         {FOOTER_CONSTANTS.map((value, index) => (
           <div
             key={index}
-            className='w-fit px-2 border gap-2 rounded-full '
+            className='w-fit px-3 border border-[#00d0ff] bg-[#00D0FF1A] font-checkboxes gap-2 rounded-md '
           >
-            <label htmlFor={value.title}>{value.title}</label>
+            <label className='text-gray-500 text-[15px]' htmlFor={value.title}>{value.title}</label>
           </div>
         ))}
       </div>

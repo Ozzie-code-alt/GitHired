@@ -4,10 +4,10 @@ import { CHECKBOXES_CONSTANTS } from '@/constants/constants';
 import React, { useState } from 'react';
 
 interface CheckboxesProps {
-    upData: (data: string[]) => void;
-  }
+  upData: (data: string[]) => void;
+}
 
-const Checkboxes: React.FC<CheckboxesProps> = ({upData}) => {
+const Checkboxes: React.FC<CheckboxesProps> = ({ upData }) => {
   const [value, grabValue] = useState<string[]>([]);
 
   const handleCheckboxChange = (title: string) => {
@@ -25,9 +25,15 @@ const Checkboxes: React.FC<CheckboxesProps> = ({upData}) => {
       <div className='grid grid-cols-3 gap-2 w-fit '>
         {CHECKBOXES_CONSTANTS.map((item, index) => (
           <div
-          key={index}
-            className='w-full px-2  
-          border gap-2 rounded-full flex justify-center items-center'
+            key={index}
+            className={`w-full px-2  
+          border gap-2 rounded-full  font-checkboxes flex justify-center items-center
+            ${item.value === "1" ? "bg-[#D3D2FF]" :
+            item.value === "2" ? "bg-[#FFDDD2]" :
+            item.value === "3" ? "bg-[#D2FFF2]" :
+            item.value === "4" ? "bg-[#D2F7FF]" :
+            item.value === "5" ? "bg-[#FFFBD2]" : ""} 
+          `}
           >
             <input
               type='checkbox'
@@ -39,7 +45,9 @@ const Checkboxes: React.FC<CheckboxesProps> = ({upData}) => {
                 handleCheckboxChange(item.title);
               }}
             />
-            <label htmlFor={item.title}>{item.title}</label>
+            <label className='text-gray-500' htmlFor={item.title}>
+              {item.title}
+            </label>
           </div>
         ))}
       </div>

@@ -16,6 +16,7 @@ const config: Config = {
       },
       fontFamily: {
         "name" : ["Arial", "sans-serif"],
+        "checkboxes" : ["Ppfraktionmono-regular", "monospace"]
       }
     },
   },
