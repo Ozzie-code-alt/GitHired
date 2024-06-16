@@ -54,7 +54,7 @@ const Content = () => {
 
         <div className='border   border-blue-500 flex flex-col gap-5 h-auto'>
           {PROJECTS_CONSTANTS.map((item, index) => (
-            <div className='border relative rounded-lg h-auto'>
+            <div key={index} className='border relative rounded-lg h-auto'>
               <Image
                 src={item.img}
                 alt='justin'
@@ -64,7 +64,7 @@ const Content = () => {
               />
               <div className='flex gap-5 border border-red-500 bottom-10 absolute '>
                 {item.tags.map((tag, index) => (
-                  <div className='flex'>{tag}</div>
+                  <div key={index} className='flex'>{tag}</div>
                 ))}
               </div>
               <div className='flex justify-between px-5 w-full border border-green-500'>
