@@ -56,3 +56,31 @@ export const FOOTER_CONSTANTS = [
     title: "PDF"
   }
 ]
+
+
+export const PROJECTS_CONSTANTS = [
+  {
+    title: "Project 1",
+    img: "https://fastly.picsum.photos/id/68/1920/1920.jpg?hmac=gi-cbp1drjkuecBUu5GQOeuzA0peuJDiid_EoQ-Jk7E",
+    tags: ["Next JS", "Prisma", "MongoDB"], 
+    route: "/project1",
+  },
+  {
+    title: "Project 2",
+    img: "https://fastly.picsum.photos/id/8/1080/1080.jpg?hmac=LFjuLaZt7wzkxAo_PMQJ0uqeT6nNL6ikXJLsd1r4rWA",
+    tags: ["MongoDB"], 
+    route: "/project2",
+  },
+  {
+    title: "Project 3",
+    img: "https://fastly.picsum.photos/id/130/1080/1080.jpg?hmac=LWoVTezfAbEgp1rsBx3_MyrmUqY6LfDqPLFgp1WKPsU",
+    tags: ["Astro"], 
+    route: "/project3",
+  },
+  {
+    title: "Project 4",
+    img: "https://fastly.picsum.photos/id/716/1080/1080.jpg?hmac=WYIXuVJPa36sM2_Nh-5ynnN2pGXNJ8yf_2v8lRJIMNM",
+    tags: ["React"], 
+    route: "/project4",
+  }
+]
