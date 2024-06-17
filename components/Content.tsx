@@ -1,15 +1,35 @@
 'use client';
-import React, { useRef, useState } from 'react';
+import React, {  useState } from 'react';
 import LeftNav from './LeftNav';
 import Checkboxes from './Checkboxes';
 import Footer from './Footer';
 import { PROJECTS_CONSTANTS } from '@/constants/constants';
 import Image from 'next/image';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
 
-
+gsap.registerPlugin(ScrollTrigger);
 
 const Content = () => {
-  
+
+  useGSAP(() => {
+    gsap.fromTo(
+      // best used when both ends needs to be animatied  
+      "#red-box",
+      {
+        x: 0,
+        opacity: 0,
+        borderRadius: "0%",
+      },
+      {
+        //from starts at 600 ps
+        opacity: 1,
+        duration: 10,
+        ease: "bounce.out",
+      }
+    );
+  }, []);
   const [first, setfirst] = useState<string[]>([]);
 
   const handleData = (data: string[]) => {
@@ -17,7 +37,7 @@ const Content = () => {
     setfirst(data);
   };
   return (
-    <div className='w-full h-screen px-10 py-10 flex flex-col lg:flex-row'>
+    <div className='w-full h-screen px-3 gap-5  sm:px-10 py-10 flex flex-col lg:flex-row'>
       {/*Left */}
       <div className='w-[40%]] h-full  '>
         <div className='pb-10'>
@@ -46,12 +66,9 @@ const Content = () => {
         </div>
       </div>
       {/*Right */}
-      <div
-        id='smooth-wrapper'
-        className='w-full  flex flex-col gap-5 px-10 lg:overflow-y-scroll overflow-x-hidden '
-      >
+      <div className='w-full flex flex-col gap-5 sm:px-10 lg:overflow-y-auto border border-red-500'>
         {first.length > 0 ? (
-          <div id='smooth-content' className='px-10'>
+          <div className='px-10'>
             <div className='flex h-fit w-full transition duration-1000 ease-in-out justify-end gap-5 '>
               {first.map((item, index) => (
                 <div key={index} className='border transition  duration-1000 ease-in-out'>
@@ -72,8 +89,8 @@ const Content = () => {
                     height={720}
                     className='object-cover'
                   />
-                  <div className='flex gap-5 border border-red-500 bottom-10 absolute'>
-                    {item.tags.join(', ')} {/* Join the tags array to display it as a string */}
+                  <div className='flex gap-5 border border-red-500 left-5 bottom-10 absolute'>
+                    {item.tags.join(', ')}
                   </div>
                   <div className='flex justify-between px-5 w-full border border-green-500'>
                     <div className=''>{item.title}</div>
@@ -86,9 +103,11 @@ const Content = () => {
             </div>
           </div>
         ) : (
-          <div id='smooth-content' className='transition-all duration-500 px-10  ease-in-out'>
+          <div
+            className='transition-all  flex flex-col gap-20  duration-500 px-10 border border-blue-500   ease-in-out'
+          >
             {PROJECTS_CONSTANTS.map((item, index) => (
-              <div key={index} className='border relative rounded-lg h-auto'>
+              <div key={index} className={`border relative  rounded-lg h-auto`} id={item.transition}>
                 <Image
                   src={item.img}
                   alt='justin'
@@ -96,7 +115,7 @@ const Content = () => {
                   height={720}
                   className='object-cover'
                 />
-                <div className='flex gap-5 border border-red-500 bottom-10 absolute'>
+                <div className='flex gap-5 border border-red-500 left-5 bottom-10 absolute'>
                   {item.tags.join(', ')} {/* Join the tags array to display it as a string */}
                 </div>
                 <div className='flex justify-between px-5 w-full border border-green-500'>
