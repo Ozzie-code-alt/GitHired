@@ -1,4 +1,5 @@
- posts =  [
+ {
+"posts" : [
         {
             "id": 1,
             "name": "Sinigang",
@@ -24,3 +25,4 @@
             "price": "90"
         }
    ]
+}
