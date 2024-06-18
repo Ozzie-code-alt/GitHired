@@ -1,4 +1,4 @@
-{
+
    [
         {
             "id": 1,
@@ -24,5 +24,4 @@
             "img": "https://fastly.picsum.photos/id/702/340/340.jpg?hmac=Ve0rm-lUGC9QpUPW_ffs-RRUnTzgsx3HunjUlxae-Mo",
             "price": "90"
         }
-    ]
-}
+   ]
