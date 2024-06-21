@@ -8,18 +8,19 @@ import Image from 'next/image';
 
 import { DockDemo } from './DockerApps';
 import { IconCloudDemo } from './Icon-Cloud';
+import { DragCloseDrawerExample } from './DragCloseDrawer';
 
 const Content = () => {
   const [first, setfirst] = useState<string[]>([]);
-
   const handleData = (data: string[]) => {
     console.log('this is from parent', data);
     setfirst(data);
   };
+
   return (
-    <div className='w-full relative h-screen px-3 gap-5  sm:px-10 py-10 flex flex-col lg:flex-row'>
+    <div className='w-full  relative h-screen px-3 gap-5  sm:px-10 py-10 flex flex-col border border-red-500 lg:flex-row'>
       {/*Left */}
-      <div className='w-[40%]] h-full  '>
+      <div className='w-[40%] h-full opacity-1'>
         <div className='pb-10'>
           <LeftNav />
         </div>
@@ -112,9 +113,15 @@ const Content = () => {
                 </div>
               </div>
             ))}
+            <DragCloseDrawerExample />
           </div>
         )}
       </div>
+
+      <div className='h-screen hidden'>
+        <p>More Text Here</p>
+      </div>
+
       <div className='absolute group  w-full  flex flex-col justify-center items-center bottom-32'>
         <div className='opacity-0 border border-red-500 group-hover:opacity-100 duration-500 flex justify-center transition ease-in-out'>
           <DockDemo />
