@@ -1,0 +1,28 @@
+ {
+"posts" : [
+        {
+            "id": 1,
+            "name": "Sinigang",
+            "img": "https://fastly.picsum.photos/id/229/340/340.jpg?hmac=jUwnd4OUqW6appyEhyYUP0OJx30tGkgJfhlxjZJFvzo",
+            "price": "490"
+        },
+        {
+            "id": 2,
+            "name": "Giniling",
+            "img": "https://fastly.picsum.photos/id/702/340/340.jpg?hmac=Ve0rm-lUGC9QpUPW_ffs-RRUnTzgsx3HunjUlxae-Mo",
+            "price": "210"
+        },
+        {
+            "id": 3,
+            "name": "Fish",
+            "img": "https://fastly.picsum.photos/id/702/340/340.jpg?hmac=Ve0rm-lUGC9QpUPW_ffs-RRUnTzgsx3HunjUlxae-Mo",
+            "price": "1080"
+        },
+        {
+            "id": 4,
+            "name": "Kalabasa",
+            "img": "https://fastly.picsum.photos/id/702/340/340.jpg?hmac=Ve0rm-lUGC9QpUPW_ffs-RRUnTzgsx3HunjUlxae-Mo",
+            "price": "90"
+        }
+   ]
+}
