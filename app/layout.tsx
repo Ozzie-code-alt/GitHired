@@ -18,7 +18,7 @@ export default function RootLayout({
 
   return (
     <ThemeProvider>
-      <div className={ `${inter.className}  dark:bg-black`}>{children}</div>
+      <div className={ `${inter.className}  dark:bg-black lg:overflow-hidden`}>{children}</div>
     </ThemeProvider>
   );
 }

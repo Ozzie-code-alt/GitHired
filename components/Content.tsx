@@ -5,9 +5,8 @@ import Checkboxes from './Checkboxes';
 import Footer from './Footer';
 import { PROJECTS_CONSTANTS } from '@/constants/constants';
 import Image from 'next/image';
-
+import { MdOutlineKeyboardDoubleArrowDown } from 'react-icons/md';
 import { DockDemo } from './DockerApps';
-import { IconCloudDemo } from './Icon-Cloud';
 import { DragCloseDrawerExample } from './DragCloseDrawer';
 
 const Content = () => {
@@ -18,34 +17,31 @@ const Content = () => {
   };
 
   return (
-    <div className='w-full  relative h-screen px-3 gap-5  sm:px-10 py-10 flex flex-col border border-red-500 lg:flex-row'>
+    <div className='w-full  relative h-screen px-3 gap-5  sm:px-10 py-10 flex flex-col  lg:flex-row'>
       {/*Left */}
-      <div className='w-[40%] h-full opacity-1'>
+      <div className='w-full lg:w-[40%] h-full opacity-1'>
         <div className='pb-10'>
           <LeftNav />
         </div>
         <div className='pb-5'>
-          <p className='font-bold  font-name text-[1.5rem] '>Justin Santos</p>
-          <p className='font-medium font-name text-[1.2rem]'>Software Engineer</p>
+          <p className='font-bold  font-name text-[1.5rem] dark:text-white '>Justin Santos</p>
+          <p className='font-medium font-name text-[1.2rem] dark:text-white'>Software Engineer</p>
         </div>
 
-        <p className='pb-5'>
-          I&apos;m Justin, a uniquely creative designer and developer with over 15 years of
-          experience. I primarily focus on Ideas, Products and Brands.
+        <p className='pb-5 dark:text-white'>
+          Hello! I&apos;m a Fullstack Web Developer passionate about building seamless and scalable web
+          applications that deliver outstanding user experiences. Proficient in both web and mobile
+          development using React Native and Expo
         </p>
 
         <div className='border-2 border-dashed border-slate-500 mb-5' />
 
-        <div className='hidden lg:flex flex-col gap-5 justify-between w-full h-[67.4%] '>
+        <div className='hidden lg:flex flex-col gap-5 justify-between w-full h-[60.4%] '>
           <div className=''>
             <Checkboxes upData={handleData} />
           </div>
 
-          <div className=' flex justify-center'>
-            <IconCloudDemo />
-          </div>
-
-          <div className='justify-end '>
+          <div>
             <Footer />
           </div>
         </div>
@@ -56,13 +52,13 @@ const Content = () => {
           <div className='px-10'>
             <div className='flex h-fit w-full transition duration-1000 ease-in-out justify-end gap-5 '>
               {first.map((item, index) => (
-                <div key={index} className='border transition  duration-1000 ease-in-out'>
+                <div key={index} className='bg-[#FFDDD2] px-2 rounded-md'>
                   {item}
                 </div>
               ))}
             </div>
 
-            <div className='border   border-blue-500 flex flex-col gap-5 h-auto'>
+            <div className=' flex flex-col gap-5 h-auto'>
               {PROJECTS_CONSTANTS.filter((item) =>
                 item.tags.some((tag) => first.includes(tag))
               ).map((item, index) => (
@@ -74,10 +70,12 @@ const Content = () => {
                     height={720}
                     className='object-cover'
                   />
-                  <div className='flex gap-5 border border-red-500 left-5 bottom-10 absolute'>
+                  <div
+                    className={`flex gap-5 px-2 rounded-lg  left-5 bottom-10 absolute ${item.value === '1' ? 'bg-[#D3D2FF]' : item.value === '2' ? 'bg-[#FFDDD2]' : item.value === '3' ? 'bg-[#D2FFF2]' : 'bg-[#D2F7FF]'}`}
+                  >
                     {item.tags.join(', ')}
                   </div>
-                  <div className='flex justify-between px-5 w-full border border-green-500'>
+                  <div className='flex justify-between px-5 w-full '>
                     <div className=''>{item.title}</div>
                     <div className=''>
                       <button>View More</button>
@@ -102,10 +100,12 @@ const Content = () => {
                   height={720}
                   className='object-cover'
                 />
-                <div className='flex gap-5  left-5 bottom-10 absolute'>
+                <div
+                  className={`flex gap-5 px-2 rounded-lg  left-5 bottom-10 absolute ${item.value === '1' ? 'bg-[#D3D2FF]' : item.value === '2' ? 'bg-[#FFDDD2]' : item.value === '3' ? 'bg-[#D2FFF2]' : 'bg-[#D2F7FF]'}`}
+                >
                   {item.tags.join(', ')} {/* Join the tags array to display it as a string */}
                 </div>
-                <div className='flex justify-between px-5 w-full border border-green-500'>
+                <div className='flex justify-between px-5 w-full '>
                   <div className=''>{item.title}</div>
                   <div className=''>
                     <button>View More</button>
@@ -123,11 +123,11 @@ const Content = () => {
       </div>
 
       <div className='absolute group  w-full  flex flex-col justify-center items-center bottom-32'>
-        <div className='opacity-0 border border-red-500 group-hover:opacity-100 duration-500 flex justify-center transition ease-in-out'>
+        <div className='opacity-0  group-hover:opacity-100 duration-500 flex justify-center transition ease-in-out'>
           <DockDemo />
         </div>
-        <div className='group-hover:opacity-0  absolute top-24'>
-          <p>Hover for Links</p>
+        <div className='group-hover:opacity-0 text-[40px] absolute top-20'>
+          <MdOutlineKeyboardDoubleArrowDown />
         </div>
       </div>
     </div>
