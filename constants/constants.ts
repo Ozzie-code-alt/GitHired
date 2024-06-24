@@ -53,6 +53,16 @@ export const CHECKBOXES_CONSTANTS = [
     title: "React",
     value: "5" ,
   }
+  ,
+  {
+    title: "Tailwind",
+    value: "6" ,
+  },
+  {
+    title: "Framer",
+    value: "7" ,
+  }
+
 
 ]
 
@@ -71,35 +81,63 @@ export const FOOTER_CONSTANTS = [
 
 export const PROJECTS_CONSTANTS = [
   {
-    title: "Project 1",
-    img: "https://fastly.picsum.photos/id/68/1920/1920.jpg?hmac=gi-cbp1drjkuecBUu5GQOeuzA0peuJDiid_EoQ-Jk7E",
-    tags: ["Next JS", "Prisma", "MongoDB"], 
-    value:"1",
-    route: "/project1",
-    transition: "Effect1"
-  },
-  {
-    title: "Project 2",
-    img: "https://fastly.picsum.photos/id/8/1080/1080.jpg?hmac=LFjuLaZt7wzkxAo_PMQJ0uqeT6nNL6ikXJLsd1r4rWA",
-    tags: ["MongoDB"], 
+    title: "JCI Regatta Origanization",
+    img: "/Projects/JCI.webp",
+    tags: ["Astro", "Tailwind"], 
     value:"2",
-    route: "/project2",
+    route: "https://jci-regatta-iloilo-astro.vercel.app/",
     transition: "Effect2"
   },
   {
-    title: "Project 3",
-    img: "https://fastly.picsum.photos/id/130/1080/1080.jpg?hmac=LWoVTezfAbEgp1rsBx3_MyrmUqY6LfDqPLFgp1WKPsU",
-    tags: ["Astro"], 
+    title: "Apple Iphone 15 Web Clone ",
+    img: "/Projects/AppleWebclone.webp",
+    tags: ["React","GSAP", "Tailwind"], 
     value:"3",
-    route: "/project3",
+    route: "https://apple-webclone-beta.vercel.app/",
     transition: "red-box"
   },
   {
-    title: "Project 4",
-    img: "https://fastly.picsum.photos/id/716/1080/1080.jpg?hmac=WYIXuVJPa36sM2_Nh-5ynnN2pGXNJ8yf_2v8lRJIMNM",
-    tags: ["React"], 
+    title: "Camp Website - Putok Truno Camp",
+    img: "/Projects/PutokCamp.webp",
+    tags: ["React","Tailwind"], 
     value:"4",
+    route: "https://starlight-six.vercel.app/",
+    transition: "red-box"
+  }
+  ,
+  {
+    title: "Wedding - Promises",
+    img: "/Projects/Promises.webp",
+    tags: ["NextJs", "Framer", "MongoDB"], 
+    value:"3",
+    route: "https://promises-3.vercel.app/",
+    transition: "red-box"
+  }
+  ,
+  {
+    title: "HooBank - Landing Page",
+    img: "/Projects/BankApp.webp",
+    tags: ["NextJs", "Framer", "Tailwind"], 
+    value:"2",
+    route: "https://blue-horizon-xi.vercel.app/",
+    transition: "red-box"
+  }
+  ,
+  {
+    title: "Lakbay",
+    img: "/Projects/Lakbay.webp",
+    tags: ["React", "CSS"], 
+    value:"2",
     route: "/project4",
+    transition: "red-box"
+  }
+  ,
+  {
+    title: "Open Bible",
+    img: "/Projects/openBible.webp",
+    tags: ["HTML", "CSS", "JS"], 
+    value:"3",
+    route: "https://hackathon-website-gilt.vercel.app/",
     transition: "red-box"
   }
 ]

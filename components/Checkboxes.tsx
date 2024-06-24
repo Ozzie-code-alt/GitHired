@@ -28,11 +28,23 @@ const Checkboxes: React.FC<CheckboxesProps> = ({ upData }) => {
             key={index}
             className={`w-full px-2  
           border gap-2 rounded-full  font-checkboxes flex justify-center items-center
-            ${item.value === "1" ? "bg-[#D3D2FF]" :
-            item.value === "2" ? "bg-[#FFDDD2]" :
-            item.value === "3" ? "bg-[#D2FFF2]" :
-            item.value === "4" ? "bg-[#D2F7FF]" :
-            item.value === "5" ? "bg-[#FFFBD2]" : ""} 
+            ${
+              item.value === '1'
+                ? 'bg-[#D3D2FF]'
+                : item.value === '2'
+                  ? 'bg-[#FFDDD2]'
+                  : item.value === '3'
+                    ? 'bg-[#D2FFF2]'
+                    : item.value === '4'
+                      ? 'bg-[#D2F7FF]'
+                      : item.value === '5'
+                        ? 'bg-[#FFFBD2]'
+                        : item.value === '6'
+                          ? 'bg-[#FFDDD2]'
+                          : item.value === '7'
+                            ? 'bg-[#D2FFF2]'
+                            : ''
+            } 
           `}
           >
             <input

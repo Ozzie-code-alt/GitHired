@@ -1,21 +1,36 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import LeftNav from './LeftNav';
 import Checkboxes from './Checkboxes';
 import Footer from './Footer';
 import { PROJECTS_CONSTANTS } from '@/constants/constants';
 import Image from 'next/image';
-import { MdOutlineKeyboardDoubleArrowDown } from 'react-icons/md';
+import { MdOutlineDarkMode, MdOutlineKeyboardDoubleArrowDown } from 'react-icons/md';
 import { DockDemo } from './DockerApps';
 import { DragCloseDrawerExample } from './DragCloseDrawer';
+import { PiSunLight } from 'react-icons/pi';
 
 const Content = () => {
   const [first, setfirst] = useState<string[]>([]);
+  const [mode, setMode] = useState('light');
   const handleData = (data: string[]) => {
     console.log('this is from parent', data);
     setfirst(data);
   };
 
+  useEffect(() => {
+    localStorage.setItem('Mode', mode);
+    console.log('local set', mode);
+  }, [mode]);
+
+  const onClick = () => {
+    setMode((prevMode) => {
+      const newMode = prevMode === 'light' ? 'dark' : 'light';
+      localStorage.setItem('Mode', newMode);
+      window.dispatchEvent(new Event('storage')); // Manually dispatch the storage event
+      return newMode;
+    });
+  };
   return (
     <div className='w-full  relative h-screen px-3 gap-5  sm:px-10 py-10 flex flex-col  lg:flex-row'>
       {/*Left */}
@@ -29,9 +44,9 @@ const Content = () => {
         </div>
 
         <p className='pb-5 dark:text-white'>
-          Hello! I&apos;m a Fullstack Web Developer passionate about building seamless and scalable web
-          applications that deliver outstanding user experiences. Proficient in both web and mobile
-          development using React Native and Expo
+          Hello! I&apos;m a Fullstack Web Developer passionate about building seamless and scalable
+          web applications that deliver outstanding user experiences. Proficient in both web and
+          mobile development using React Native and Expo
         </p>
 
         <div className='border-2 border-dashed border-slate-500 mb-5' />
@@ -50,7 +65,7 @@ const Content = () => {
       <div className='w-full flex flex-col gap-5 sm:px-10 lg:overflow-y-auto '>
         {first.length > 0 ? (
           <div className='px-10'>
-            <div className='flex h-fit w-full transition duration-1000 ease-in-out justify-end gap-5 '>
+            <div className='flex h-fit w-full transition duration-1000 ease-in-out justify-end pb-5 gap-5 '>
               {first.map((item, index) => (
                 <div key={index} className='bg-[#FFDDD2] px-2 rounded-md'>
                   {item}
@@ -62,7 +77,7 @@ const Content = () => {
               {PROJECTS_CONSTANTS.filter((item) =>
                 item.tags.some((tag) => first.includes(tag))
               ).map((item, index) => (
-                <div key={index} className='border relative rounded-lg h-auto'>
+                <div key={index} className='border-2  relative rounded-lg h-auto'>
                   <Image
                     src={item.img}
                     alt='justin'
@@ -71,14 +86,16 @@ const Content = () => {
                     className='object-cover'
                   />
                   <div
-                    className={`flex gap-5 px-2 rounded-lg  left-5 bottom-10 absolute ${item.value === '1' ? 'bg-[#D3D2FF]' : item.value === '2' ? 'bg-[#FFDDD2]' : item.value === '3' ? 'bg-[#D2FFF2]' : 'bg-[#D2F7FF]'}`}
+                    className={`flex gap-5 px-2 rounded-lg  left-5 bottom-20 absolute ${item.value === '1' ? 'bg-[#D3D2FF]' : item.value === '2' ? 'bg-[#FFDDD2]' : item.value === '3' ? 'bg-[#D2FFF2]' : 'bg-[#D2F7FF]'}`}
                   >
                     {item.tags.join(', ')}
                   </div>
-                  <div className='flex justify-between px-5 w-full '>
-                    <div className=''>{item.title}</div>
-                    <div className=''>
-                      <button>View More</button>
+                  <div className='flex justify-between px-5 py-5 w-full '>
+                    <div className='dark:text-white'>{item.title}</div>
+                    <div className='dark:text-white'>
+                      <a href={item.route} target='_blank'>
+                        <button>View Project</button>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -86,7 +103,7 @@ const Content = () => {
             </div>
           </div>
         ) : (
-          <div className='transition-all pb-40  flex flex-col gap-20  duration-500 px-10   ease-in-out'>
+          <div className='transition-all pb-40  border-l border-slate-500 mb-5 flex flex-col gap-20  duration-500 px-10   ease-in-out'>
             {PROJECTS_CONSTANTS.map((item, index) => (
               <div
                 key={index}
@@ -101,14 +118,16 @@ const Content = () => {
                   className='object-cover'
                 />
                 <div
-                  className={`flex gap-5 px-2 rounded-lg  left-5 bottom-10 absolute ${item.value === '1' ? 'bg-[#D3D2FF]' : item.value === '2' ? 'bg-[#FFDDD2]' : item.value === '3' ? 'bg-[#D2FFF2]' : 'bg-[#D2F7FF]'}`}
+                  className={`flex gap-5 px-2 rounded-lg  left-5 bottom-20 absolute ${item.value === '1' ? 'bg-[#D3D2FF]' : item.value === '2' ? 'bg-[#FFDDD2]' : item.value === '3' ? 'bg-[#D2FFF2]' : 'bg-[#D2F7FF]'}`}
                 >
                   {item.tags.join(', ')} {/* Join the tags array to display it as a string */}
                 </div>
-                <div className='flex justify-between px-5 w-full '>
-                  <div className=''>{item.title}</div>
-                  <div className=''>
-                    <button>View More</button>
+                <div className='flex justify-between rounded-lg  px-5 py-5 w-full '>
+                  <div className='dark:text-white'>{item.title}</div>
+                  <div className='dark:text-white'>
+                    <a href={item.route} target='_blank'>
+                      <button>View Project</button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -129,6 +148,16 @@ const Content = () => {
         <div className='group-hover:opacity-0 text-[40px] absolute top-20'>
           <MdOutlineKeyboardDoubleArrowDown />
         </div>
+      </div>
+
+      <div className='absolute flex  w-full  justify-end top-0 pt-5'>
+        <button onClick={onClick} className='text-[20px]  w-fit flex lg:justify-end pr-5'>
+          {mode === 'light' ? (
+            <PiSunLight className='rounded-md p-1 transition-all text-[40px] duration-300 ease-in-out ' />
+          ) : (
+            <MdOutlineDarkMode className=' text-white rounded-md p-1 transition-all text-[40px] duration-300 ease-in-out' />
+          )}
+        </button>
       </div>
     </div>
   );
