@@ -97,7 +97,7 @@ export const PROJECTS_CONSTANTS = [
     transition: "red-box"
   },
   {
-    title: "Camp Website - Putok Truno Camp",
+    title: "Putok Truno Camp",
     img: "/Projects/PutokCamp.webp",
     tags: ["React","Tailwind"], 
     value:"4",

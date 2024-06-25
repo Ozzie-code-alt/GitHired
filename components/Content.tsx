@@ -32,7 +32,7 @@ const Content = () => {
     });
   };
   return (
-    <div className='w-full  relative h-screen px-3 gap-5  sm:px-10 py-10 flex flex-col  lg:flex-row'>
+    <div className='w-full  relative lg:h-screen px-3 gap-5  sm:px-10 py-10 flex flex-col  lg:flex-row'>
       {/*Left */}
       <div className='w-full lg:w-[40%] h-full opacity-1'>
         <div className='pb-10'>
@@ -103,11 +103,11 @@ const Content = () => {
             </div>
           </div>
         ) : (
-          <div className='transition-all pb-40  border-l border-slate-500 mb-5 flex flex-col gap-20  duration-500 px-10   ease-in-out'>
+          <div className='transition-all pb-40  lG:border-l border-slate-500 mb-5 flex flex-col gap-20  duration-500 px-14   ease-in-out'>
             {PROJECTS_CONSTANTS.map((item, index) => (
               <div
                 key={index}
-                className={`border relative  rounded-lg h-auto`}
+                className={`border relative  flex flex-col  justify-center items-center  rounded-lg h-auto`}
                 id={item.transition}
               >
                 <Image
@@ -115,14 +115,14 @@ const Content = () => {
                   alt='justin'
                   width={1080}
                   height={720}
-                  className='object-cover'
+                  className='object-cover shadow-2xl hover:scale-105 transition-all duration-500 ease-in-out rounded-t-lg'
                 />
                 <div
                   className={`flex gap-5 px-2 rounded-lg  left-5 bottom-20 absolute ${item.value === '1' ? 'bg-[#D3D2FF]' : item.value === '2' ? 'bg-[#FFDDD2]' : item.value === '3' ? 'bg-[#D2FFF2]' : 'bg-[#D2F7FF]'}`}
                 >
                   {item.tags.join(', ')} {/* Join the tags array to display it as a string */}
                 </div>
-                <div className='flex justify-between rounded-lg  px-5 py-5 w-full '>
+                <div className='flex justify-between border-l-2 border-b-2 border-r-2 border-gray-500  rounded-b-lg  px-5 py-5 w-full '>
                   <div className='dark:text-white'>{item.title}</div>
                   <div className='dark:text-white'>
                     <a href={item.route} target='_blank'>
@@ -150,8 +150,8 @@ const Content = () => {
         </div>
       </div>
 
-      <div className='absolute flex  w-full  justify-end top-0 pt-5'>
-        <button onClick={onClick} className='text-[20px]  w-fit flex lg:justify-end pr-5'>
+      <div className='absolute flex  w-[95%]  justify-end top-0 pt-5'>
+        <button onClick={onClick} className='text-[20px]  w-fit flex lg:justify-end pr-10 xl:pr-5'>
           {mode === 'light' ? (
             <PiSunLight className='rounded-md p-1 transition-all text-[40px] duration-300 ease-in-out ' />
           ) : (
