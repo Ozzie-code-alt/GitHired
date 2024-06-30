@@ -122,6 +122,18 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@lordicon/helpers@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@lordicon/helpers/-/helpers-1.6.0.tgz#c4ebaa8960e6321c6b2b9e731b5009e60d709af4"
+  integrity sha512-iEw6q1gycHf77e4o+PdTg1Ua4yXdREVnCsErTw/f4eaAUDYFF/qWQSq3mJJuiwvZ/JT1vwctQ2dKr1FxUY1W2w==
+
+"@lordicon/react@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@lordicon/react/-/react-1.6.0.tgz#7f16d5089c95b435faf366aaa673df9374c112ae"
+  integrity sha512-SqDdc9/ReRpO3D8t1WG+yOKAFwQsewuw9hf6++faJhGk/ZgUOA4mqPke4R/pc0pMhXHOeET9DPgvNi1dmRpxxw==
+  dependencies:
+    "@lordicon/helpers" "^1.6.0"
+
 "@next/env@14.2.4":
   version "14.2.4"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-14.2.4.tgz#5546813dc4f809884a37d257b254a5ce1b0248d7"
@@ -1927,6 +1939,11 @@ loose-envify@^1.1.0, loose-envify@^1.4.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
+lottie-web@^5.12.2:
+  version "5.12.2"
+  resolved "https://registry.yarnpkg.com/lottie-web/-/lottie-web-5.12.2.tgz#579ca9fe6d3fd9e352571edd3c0be162492f68e5"
+  integrity sha512-uvhvYPC8kGPjXT3MyKMrL3JitEAmDMp30lVkuq/590Mw9ok6pWcFCwXJveo0t5uqYw1UREQHofD+jVpdjBv8wg==
+
 lru-cache@^10.2.0:
   version "10.2.2"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.2.2.tgz#48206bc114c1252940c41b25b41af5b545aca878"
@@ -2368,6 +2385,11 @@ react-icons@^5.2.1:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-5.2.1.tgz#28c2040917b2a2eda639b0f797bff1888e018e4a"
   integrity sha512-zdbW5GstTzXaVKvGSyTaBalt7HSfuK5ovrzlpyiWHAFXndXTdd/1hdDHI4xBM1Mn7YriT6aqESucFl9kEXzrdw==
+
+react-intersection-observer@^9.10.3:
+  version "9.10.3"
+  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-9.10.3.tgz#70d21ad3c3719ea4fb4eb5a543b9755d31de3b8d"
+  integrity sha512-9NYfKwPZRovB6QJee7fDg0zz/SyYrqXtn5xTZU0vwLtLVBtfu9aZt1pVmr825REE49VPDZ7Lm5SNHjJBOTZHpA==
 
 react-is@^16.13.1:
   version "16.13.1"

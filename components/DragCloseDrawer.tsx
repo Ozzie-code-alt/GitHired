@@ -30,17 +30,11 @@ export const DragCloseDrawerExample = () => {
             Expo, enabling me to create high-quality mobile applications. My goal is to use my
             expertise to create innovative solutions that make a real difference.
           </p>
-          <p>
+          {/* <p>
             Laudantium corrupti neque rerum labore tempore sapiente. Quos, nobis dolores. Esse fuga,
             cupiditate rerum soluta magni numquam nemo aliquid voluptate similique deserunt!
-          </p>
-          <p>
-            Rerum inventore provident laboriosam quo facilis nisi voluptatem quam maxime pariatur.
-            Velit reiciendis quasi sit magni numquam quos itaque ratione, fugit adipisci atque est,
-            tenetur officiis explicabo id molestiae aperiam? Expedita quidem inventore magni?
-            Doloremque architecto mollitia, dicta, fugit minima velit explicabo sapiente beatae
-            fugiat accusamus voluptatum, error voluptatem ab asperiores quo modi possimus.
-          </p>
+          </p> */}
+          <p>Will Add more Stuff here {':<'}</p>
         </div>
       </DragCloseDrawer>
     </div>

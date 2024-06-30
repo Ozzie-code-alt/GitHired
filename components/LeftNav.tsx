@@ -1,12 +1,17 @@
 import { LEFTNAV_CONSTANTS } from '@/constants/constants';
-import React from 'react';
+import React, { useState } from 'react';
+import SpringModal from './Modal';
 
 const LeftNav = () => {
+  const [open, setOpen] = useState(false);
   return (
     <div className='hidden lg:flex justify-between'>
       <div className='flex flex-row gap-5'>
         {LEFTNAV_CONSTANTS.map((item, index) => (
           <div
+            onClick={() => {
+              setOpen(true);
+            }}
             key={index}
             className={`rounded-3xl  z-50 border-2 border-dashed hover:scale-105  duration-700 ease-in-out   px-6 flex justify-center hover:cursor-pointer items-center uppercase text-black transition-all  hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
                ${
@@ -21,6 +26,8 @@ const LeftNav = () => {
           </div>
         ))}
       </div>
+
+      <SpringModal isOpen={open} setIsOpen={setOpen} />
     </div>
   );
 };
