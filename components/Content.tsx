@@ -64,9 +64,7 @@ const Content = () => {
         <RightPage first={first} />
       </div>
 
-      <div className='h-screen hidden'>
-        <p>More Text Here</p>
-      </div>
+ 
 
       <div className='absolute group w-full  hidden  lg:flex flex-col justify-center items-center bottom-32'>
         <div className='opacity-0  group-hover:opacity-100 duration-500 flex justify-center transition ease-in-out'>

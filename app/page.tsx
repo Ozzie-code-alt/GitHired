@@ -1,6 +1,5 @@
 'use client';
 import AnimatedSplash from '@/components/AnimatedSplash';
-import Content from '@/components/Content';
 import Navbar from '@/components/Navbar';
 import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';

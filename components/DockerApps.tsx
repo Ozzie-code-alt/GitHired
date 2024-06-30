@@ -2,7 +2,7 @@ import { Dock, DockIcon } from './sub-components/dock';
 import React, { useRef, useState } from 'react';
 import { Player } from '@lordicon/react';
 import dynamic from 'next/dynamic';
-import { tree } from 'next/dist/build/templates/app-page';
+import { motion } from 'framer-motion';
 export type IconProps = React.HTMLAttributes<SVGElement>;
 const FacebookIcon = require('../public/json/facebook.json') as string;
 const EmailIcon = require('../public/json/email.json') as string;
@@ -15,6 +15,7 @@ export function DockDemo() {
   const [tooltipVisibleGithub, setTooltipVisibleGithub] = useState(false);
   const [tooltipVisibleEmailLinkedin, setTooltipVisibleEmailLinkedin] = useState(false);
   const [tooltipVisibleEmailWhat, setTooltipVisibleEmailWhat] = useState(false);
+  const [clicked, setClicked] = useState(false);
   const ClientSideOnlyAnimatedFacebook = dynamic(
     () => import('@/components/sub-components/animatedFacebook'),
     {
@@ -101,79 +102,94 @@ export function DockDemo() {
       <Dock>
         <DockIcon className='flex flex-col  group relative'>
           {tooltipVisible && (
-            <div className=' text-center w-fit bottom-14 absolute transition-all duration-500 ease-in-out '>
+            <div className=' dark:text-white text-center w-fit bottom-14 absolute transition-all duration-500 ease-in-out '>
               Facebook
             </div>
           )}
           <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className=''>
             <div>
-              <div className='flex md:hidden'>
-                <ClientSideOnlyAnimatedFacebook />
-              </div>
-              <div className='hidden md:flex'>
-                <Player ref={FacebookRef} size={40} icon={FacebookIcon} />
-              </div>
+              <a href='https://www.facebook.com/SarcasmIzLit/' target='_blank'>
+                <div className='flex md:hidden'>
+                  <ClientSideOnlyAnimatedFacebook />
+                </div>
+                <div className='hidden md:flex'>
+                  <Player ref={FacebookRef} size={40} icon={FacebookIcon} />
+                </div>
+              </a>
             </div>
           </div>
         </DockIcon>
         <DockIcon>
           {tooltipVisibleEmail && (
-            <div className=' text-center w-fit bottom-16 absolute transition-all duration-500 ease-in-out '>
+            <div className=' dark:text-white text-center w-fit bottom-16 absolute transition-all duration-500 ease-in-out '>
               Gmail
             </div>
           )}
           <div onMouseEnter={handleMouseEnterEmail} onMouseLeave={handleMouseLeaveEmail}>
             <div>
-              <div className='flex md:hidden'>
-                <ClientSideOnlyAnimatedEmail />
-              </div>
-              <div className='hidden md:flex'>
-                <Player ref={EmailRef} size={40} icon={EmailIcon} />
-              </div>
+              <a href='mailto:jsantosvee@gmail.com'>
+                <div className='flex md:hidden'>
+                  <ClientSideOnlyAnimatedEmail />
+                </div>
+                <div className='hidden md:flex'>
+                  <Player ref={EmailRef} size={40} icon={EmailIcon} />
+                </div>
+              </a>
             </div>
           </div>
         </DockIcon>
         <DockIcon>
           {tooltipVisibleGithub && (
-            <div className=' text-center w-fit bottom-16 absolute transition-all duration-500 ease-in-out '>
+            <div className=' dark:text-white text-center w-fit bottom-16 absolute transition-all duration-500 ease-in-out '>
               Github
             </div>
           )}
           <div onMouseEnter={handleMouseEnterGithub} onMouseLeave={handleMouseLeaveGithub}>
             <div>
-              <div className='flex md:hidden'>
-                <ClientSideOnlyAnimatedGithub />
-              </div>
-              <div className='hidden md:flex'>
-                <Player ref={GithubRef} size={40} icon={GithubIcon} />
-              </div>
+              <a href='https://github.com/Ozzie-code-alt' target='_blank'>
+                <div className='flex md:hidden'>
+                  <ClientSideOnlyAnimatedGithub />
+                </div>
+                <div className='hidden md:flex'>
+                  <Player ref={GithubRef} size={40} icon={GithubIcon} />
+                </div>
+              </a>
             </div>
           </div>
         </DockIcon>
         <DockIcon>
           {tooltipVisibleEmailLinkedin && (
-            <div className=' text-center w-fit bottom-16 absolute transition-all duration-500 ease-in-out '>
+            <div className=' dark:text-white text-center w-fit bottom-16 absolute transition-all duration-500 ease-in-out '>
               Linkedin
             </div>
           )}
           <div onMouseEnter={handleMouseEnterLinkedin} onMouseLeave={handleMouseLeaveLinkedin}>
             <div>
-              <div className='flex md:hidden'>
-                <ClientSideOnlyAnimatedLinkedin />
-              </div>
-              <div className='hidden md:flex'>
-                <Player ref={LinkedinRef} size={40} icon={LinkedinIcon} />
-              </div>
+              <a href='https://www.linkedin.com/in/justin-r-santos/' target='_blank'>
+                <div className='flex md:hidden'>
+                  <ClientSideOnlyAnimatedLinkedin />
+                </div>
+                <div className='hidden md:flex'>
+                  <Player ref={LinkedinRef} size={40} icon={LinkedinIcon} />
+                </div>
+              </a>
             </div>
           </div>
         </DockIcon>
         <DockIcon>
-        {tooltipVisibleEmailWhat && (
-            <div className=' text-center w-fit bottom-16 absolute transition-all duration-500 ease-in-out '>
+          {tooltipVisibleEmailWhat && (
+            <div className=' dark:text-white text-center w-fit bottom-16 absolute transition-all duration-500 ease-in-out '>
               WhatsApp
             </div>
           )}
-          <div onMouseEnter={handleMouseEnterWhat} onMouseLeave={handleMouseLeaveWhat}>
+          <div
+            onMouseEnter={handleMouseEnterWhat}
+            onMouseLeave={handleMouseLeaveWhat}
+            onClick={() => {
+              setClicked(!clicked);
+            }}
+            className=''
+          >
             <div>
               <div className='flex md:hidden'>
                 <ClientSideOnlyAnimatedWhat />
@@ -185,7 +201,11 @@ export function DockDemo() {
           </div>
         </DockIcon>
       </Dock>
+      <motion.div
+        className={`${clicked ? 'opacity-100' : 'opacity-0'} dark:text-white w-fit border px-5 transition-all duration-500 ease-in-out absolute bottom-16  z-50 border-slate-500 rounded-lg`}
+      >
+        +63 927 2335 7178
+      </motion.div>
     </div>
   );
 }
-

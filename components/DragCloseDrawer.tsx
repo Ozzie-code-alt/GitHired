@@ -11,7 +11,7 @@ export const DragCloseDrawerExample = () => {
         onClick={() => setOpen(true)}
         className='rounded bg-indigo-500  px-4 py-2 text-white transition-colors hover:bg-indigo-600'
       >
-        Open For Moreee
+        More About Me
       </button>
 
       <DragCloseDrawer open={open} setOpen={setOpen}>
