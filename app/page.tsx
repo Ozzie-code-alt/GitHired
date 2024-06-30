@@ -10,7 +10,7 @@ export default function Home() {
     const timedOut = () => {
       setTimeout(() => {
         setTimer(true);
-      }, 6000);
+      }, 8000);
     };
 
     timedOut();
