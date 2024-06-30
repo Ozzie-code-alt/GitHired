@@ -3,10 +3,10 @@ import AnimatedSplash from '@/components/AnimatedSplash';
 import Content from '@/components/Content';
 import Navbar from '@/components/Navbar';
 import { useEffect, useState } from 'react';
-
+import dynamic from 'next/dynamic';
 export default function Home() {
   const [timer, setTimer] = useState(false);
-
+  const ContentDynamic = dynamic(() => import('../components/Content'), { ssr: false });
   useEffect(() => {
     const timedOut = () => {
       setTimeout(() => {
@@ -26,7 +26,7 @@ export default function Home() {
 
         <div className={` ${timer === true ? 'lg:flex' : 'hidden'}`}>
           <Navbar />
-          <Content />
+          <ContentDynamic />
         </div>
       </div>
     </main>

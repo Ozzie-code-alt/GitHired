@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 'use client';
 import { PROJECTS_CONSTANTS } from '@/constants/constants';
 import React, { useEffect, useRef } from 'react';

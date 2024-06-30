@@ -11,7 +11,7 @@ import { PiSunLight } from 'react-icons/pi';
 const Content = () => {
   const [first, setfirst] = useState<string[]>([]);
   const [mode, setMode] = useState('light');
-  const RightPage = dynamic(() => import('./RightPage'), { ssr: false });
+  const RightPage = dynamic(() => import('../components/RightPage'), { ssr: false });
   const handleData = (data: string[]) => {
     console.log('this is from parent', data);
     setfirst(data);
