@@ -7,7 +7,8 @@ import { MdOutlineDarkMode, MdOutlineKeyboardDoubleArrowDown } from 'react-icons
 import { DockDemo } from './DockerApps';
 import dynamic from 'next/dynamic';
 import { PiSunLight } from 'react-icons/pi';
-
+import { motion } from 'framer-motion';
+import { slideInFromBottom } from '@/lib/utils';
 const Content = () => {
   const [first, setfirst] = useState<string[]>([]);
   const [mode, setMode] = useState('light');
@@ -33,26 +34,51 @@ const Content = () => {
     <div className='w-full  relative lg:h-screen px-3 gap-5  sm:px-10 py-10 flex flex-col  lg:flex-row'>
       {/*Left */}
       <div className='w-full lg:w-[40%] h-full opacity-1'>
-        <div className='pb-10'>
+        <motion.div
+          className='pb-10'
+          initial='hidden'
+          animate={'visible'}
+          variants={slideInFromBottom(0.3)}
+        >
           <LeftNav />
-        </div>
-        <div className='pb-5'>
+        </motion.div>
+        <motion.div
+          className='pb-5'
+          initial='hidden'
+          animate={'visible'}
+          variants={slideInFromBottom(0.5)}
+        >
           <p className='font-bold  font-name text-[1.5rem] dark:text-white '>Justin Santos</p>
           <p className='font-medium font-name text-[1.2rem] dark:text-white'>Software Engineer</p>
-        </div>
+        </motion.div>
 
-        <p className='pb-5 dark:text-white'>
+        <motion.p
+          className='pb-5 dark:text-white'
+          initial='hidden'
+          animate={'visible'}
+          variants={slideInFromBottom(0.7)}
+        >
           Hello! I&apos;m a Fullstack Web Developer passionate about building seamless and scalable
           web applications that deliver outstanding user experiences. Proficient in both web and
           mobile development using React Native and Expo
-        </p>
+        </motion.p>
 
-        <div className='border-2 border-dashed border-slate-500 mb-5' />
+        <motion.div
+          className='border-2 border-dashed border-slate-500 mb-5'
+          initial='hidden'
+          animate={'visible'}
+          variants={slideInFromBottom(0.7)}
+        />
 
         <div className='hidden lg:flex flex-col gap-5 justify-between w-full h-[60.4%] '>
-          <div className=''>
+          <motion.div
+            className=''
+            initial='hidden'
+            animate={'visible'}
+            variants={slideInFromBottom(0.9)}
+          >
             <Checkboxes upData={handleData} />
-          </div>
+          </motion.div>
 
           <div>
             <Footer />
@@ -63,8 +89,6 @@ const Content = () => {
       <div className='w-full flex flex-col gap-5 px-3 sm:px-10 lg:overflow-y-auto '>
         <RightPage first={first} />
       </div>
-
- 
 
       <div className='absolute group w-full  hidden  lg:flex flex-col justify-center items-center bottom-32'>
         <div className='opacity-0  group-hover:opacity-100 duration-500 flex justify-center transition ease-in-out'>
