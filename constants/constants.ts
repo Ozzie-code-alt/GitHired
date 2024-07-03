@@ -103,7 +103,7 @@ export const PROJECTS_CONSTANTS = [
     img: '/Projects/Purrfect.webp',
     tags: ['Wordpress', 'Elementor'],
     value: '1',
-    route: 'https://hackathon-website-gilt.vercel.app/',
+    route: 'https://adopt-a-cat.wordpress.com/',
     transition: 'red-box'
   },
   {
