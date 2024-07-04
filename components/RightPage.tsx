@@ -7,6 +7,7 @@ import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { slideInFromBottom } from '@/lib/utils';
 import { DragCloseDrawerExample } from './DragCloseDrawer';
+import { useRouter } from 'next/navigation';
 
 interface RightPageProps {
   first: string[];
@@ -15,12 +16,13 @@ interface RightPageProps {
 const RightPage = ({ first }: RightPageProps) => {
   const refs = useRef<((node?: Element | null) => void)[]>([]);
   const inViews = useRef<boolean[]>([]);
-  
+
   useEffect(() => {
     refs.current = new Array(PROJECTS_CONSTANTS.length).fill(() => {});
     inViews.current = inViews.current.slice(0, PROJECTS_CONSTANTS.length).fill(false);
   }, []);
 
+  const router = useRouter();
   return (
     <div>
       {first.length > 0 ? (
@@ -38,7 +40,7 @@ const RightPage = ({ first }: RightPageProps) => {
               (item, index) => {
                 const [ref, inView] = useInView({
                   triggerOnce: true,
-                  threshold: 0.5,
+                  threshold: 0.5
                 });
                 refs.current[index] = ref;
                 inViews.current[index] = inView;
@@ -83,7 +85,7 @@ const RightPage = ({ first }: RightPageProps) => {
           {PROJECTS_CONSTANTS.map((item, index) => {
             const [ref, inView] = useInView({
               triggerOnce: true,
-              threshold: 0.5,
+              threshold: 0.5
             });
             refs.current[index] = ref;
             inViews.current[index] = inView;
@@ -103,17 +105,20 @@ const RightPage = ({ first }: RightPageProps) => {
                   alt='justin'
                   width={1080}
                   height={720}
-                  className='object-cover shadow-2xl group-hover:scale-105 transition-all duration-500 ease-in-out rounded-t-lg'
+                  className='object-cover shadow-2xl cursor-pointer group-hover:scale-105 transition-all duration-500 ease-in-out rounded-t-lg'
+                  onClick={() => {
+                    router.push(`/projects/${index}`);
+                  }}
                 />
                 <div
                   className={`flex gap-5 px-2 rounded-lg group-hover:opacity-0 duration-500 ease-out transition-all left-5 bottom-20 absolute ${
                     item.value === '1'
                       ? 'bg-[#D3D2FF]'
                       : item.value === '2'
-                      ? 'bg-[#FFDDD2]'
-                      : item.value === '3'
-                      ? 'bg-[#D2FFF2]'
-                      : 'bg-[#D2F7FF]'
+                        ? 'bg-[#FFDDD2]'
+                        : item.value === '3'
+                          ? 'bg-[#D2FFF2]'
+                          : 'bg-[#D2F7FF]'
                   }`}
                 >
                   {item.tags.join(', ')}

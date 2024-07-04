@@ -147,3 +147,14 @@ export const PROJECTS_CONSTANTS = [
     transition: 'red-box'
   }
 ];
+
+export const ProjectData = [
+  {
+    id: '0',
+    title: 'This is for content1'
+  },
+  {
+    id: '1',
+    title: 'this is for content2'
+  }
+];
