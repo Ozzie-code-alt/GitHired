@@ -188,5 +188,45 @@ export const ProjectData = [
       'This combination allowed me to create a visually appealing and interactive clone of the Apple website. The project demonstrates my ability to use modern web technologies to replicate complex designs and functionalities.',
       'This enhanced my ability to replicate complex web interfaces and improved my skills with modern web development tools.'
     ]
+  },
+  {
+    id: '2',
+    title: 'PurfectCompanions',
+    imgroute1: '/PROJECTASSET/purrFect/cat1.webp',
+    imgroute2: '/PROJECTASSET/purrFect/cat2.webp',
+    imgroute3: '/PROJECTASSET/purrFect/cat3.webp',
+    Heading: ['What is This Project About ?', 'How Did i Make it', 'What i Learned'],
+    subHeading: '',
+    ContentTitle: '',
+    ContentDescription1: [
+      'This project focuses on rescuing cats, rehabilitating them, and finding them loving homes. It emphasizes responsible pet ownership and community education while showcasing cats available for adoption. ',
+      'I created this project using WordPress. It focuses on rescuing, rehabilitating, and rehoming cats, while promoting responsible pet ownership.',
+      'From creating this project using WordPress, I learned how to effectively design and manage a website. '
+    ],
+    ContentDescription2: [
+      'Their blog highlights the joys and benefits of adopting a cat.',
+      'The blog highlights the benefits of adopting a cat and features cats ready for adoption.',
+      'I gained skills in community engagement and education about pet adoption. Additionally, I improved my ability to showcase and promote the adoption of cats through engaging blog content.'
+    ]
+  },
+  {
+    id: '3',
+    title: 'Putok Truno Camp Area',
+    imgroute1: '/PROJECTASSET/camp/camp1.webp',
+    imgroute2: '/PROJECTASSET/camp/camp2.webp',
+    imgroute3: '/PROJECTASSET/camp/camp3.webp',
+    Heading: ['What is This Project About ?', 'How Did i Make it', 'What i Learned'],
+    subHeading: '',
+    ContentTitle: '',
+    ContentDescription1: [
+      'The "Starlight Six" website is designed to enhance adventure travel experiences around the world.',
+      'I created the website using Next.js and Framer Motion for the front end.',
+      'From creating this website, I learned how to leverage Next.js and Framer Motion for building dynamic and interactive front-end applications.'
+    ],
+    ContentDescription2: [
+      'It offers offline maps, augmented reality guides, and adventure scheduling through a mobile app. This platform helps travelers find and navigate new destinations, even without an internet connection.',
+      'This combination enabled me to build an interactive and visually appealing platform.',
+      'Additionally, I improved my ability to create a seamless and engaging user experience for travelers.'
+    ]
   }
 ];

@@ -32,9 +32,9 @@ const Content = () => {
   }, [mode]);
 
   return (
-    <div className='w-full  relative lg:h-screen px-3 gap-5  sm:px-10 py-10 flex flex-col  lg:flex-row'>
+    <div className='w-full  relative  lg:h-screen px-3 gap-5  sm:px-10 py-10 flex flex-col  lg:flex-row'>
       {/*Left */}
-      <div className='w-full lg:w-[40%] h-full opacity-1'>
+      <div className='w-full relative  lg:w-[40%] h-full opacity-1'>
         <motion.div
           className='pb-10'
           initial='hidden'
@@ -50,7 +50,7 @@ const Content = () => {
           variants={slideInFromBottom(0.5)}
         >
           <p className='font-bold  font-name text-[1.5rem] dark:text-white '>Justin Santos</p>
-          <p className='font-medium font-name text-[1.2rem] dark:text-white'>Software Engineer</p>
+          <p className='font-medium font-name text-[1.2rem] dark:text-white '>Software Engineer</p>
         </motion.div>
 
         <motion.p
@@ -81,7 +81,7 @@ const Content = () => {
             <Checkboxes upData={handleData} />
           </motion.div>
 
-          <div className=' flex gap-5  items-center'>
+          <div className=' flex flex-col-reverse gap-5  w-fit  justify-center items-center '>
             <Footer />
             <LittleMascot />
           </div>
