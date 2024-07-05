@@ -9,6 +9,7 @@ import dynamic from 'next/dynamic';
 import { PiSunLight } from 'react-icons/pi';
 import { motion } from 'framer-motion';
 import { slideInFromBottom } from '@/lib/utils';
+import LittleMascot from './LittleMascot';
 const Content = () => {
   const [first, setfirst] = useState<string[]>([]);
   const [mode, setMode] = useState('light');
@@ -80,8 +81,9 @@ const Content = () => {
             <Checkboxes upData={handleData} />
           </motion.div>
 
-          <div>
+          <div className=' flex gap-5  items-center'>
             <Footer />
+            <LittleMascot />
           </div>
         </div>
       </div>

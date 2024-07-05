@@ -31,9 +31,9 @@ const SpringModal = ({
               <div className='bg-white w-16 h-16 mb-2 rounded-full text-3xl text-indigo-600 grid place-items-center mx-auto'>
                 <FiAlertCircle />
               </div>
-              <h3 className='text-3xl font-bold text-center mb-2'>Still in Progress {':<'}</h3>
+              <h3 className='text-3xl font-bold text-center mb-2'>WORK in Progress {':<'}</h3>
               <p className='text-center mb-6'>
-                This Might Take a While but yo can see my projects {':>'}
+                This Might Take a While but you can still view my projects {':>'}
               </p>
               <div className='flex gap-2'>
                 <button

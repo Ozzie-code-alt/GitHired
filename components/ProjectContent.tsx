@@ -2,31 +2,33 @@
 import React, { ReactNode, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { FiArrowUpRight } from 'react-icons/fi';
+import GradualSpacing from './sub-components/animatedText';
+import BoxReveal from './sub-components/animatedBoxtext';
 
 export const ProjectParallaxContent = ({ projectData }: any) => {
   return (
-    <div className='bg-white'>
+    <div className='bg-white '>
       <TextParallaxContent
-        imgUrl='https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+        imgUrl={projectData.imgroute1}
         subheading={projectData.title}
         heading='Built for all of us.'
       >
-        <ExampleContent />
+        <ExampleContent data={projectData} indexNumber={'0'} />
       </TextParallaxContent>
-      <TextParallaxContent
-        imgUrl='https://images.unsplash.com/photo-1530893609608-32a9af3aa95c?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-        subheading='Quality'
+      <TextParallaxContentVer2
+        imgUrl={projectData.imgroute2}
+        subheading={projectData.title}
         heading='Never compromise.'
       >
-        <ExampleContent />
-      </TextParallaxContent>
-      <TextParallaxContent
-        imgUrl='https://images.unsplash.com/photo-1504610926078-a1611febcad3?q=80&w=2416&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-        subheading='Modern'
+        <ExampleContent data={projectData} indexNumber={'1'} />
+      </TextParallaxContentVer2>
+      <TextParallaxContentVer2
+        imgUrl={projectData.imgroute3}
+        subheading={projectData.title}
         heading='Dress for the best.'
       >
-        <ExampleContent />
-      </TextParallaxContent>
+        <ExampleContent data={projectData} indexNumber={'2'} />
+      </TextParallaxContentVer2>
     </div>
   );
 };
@@ -51,7 +53,7 @@ const TextParallaxContent = ({
         paddingRight: IMG_PADDING
       }}
     >
-      <div className='relative h-[150vh]'>
+      <div className='relative'>
         <StickyImage imgUrl={imgUrl} />
         <OverlayCopy heading={heading} subheading={subheading} />
       </div>
@@ -60,6 +62,31 @@ const TextParallaxContent = ({
   );
 };
 
+const TextParallaxContentVer2 = ({
+  imgUrl,
+  subheading,
+  heading,
+  children
+}: {
+  imgUrl: string;
+  subheading: string;
+  heading: string;
+  children: ReactNode;
+}) => {
+  return (
+    <div
+      style={{
+        paddingLeft: IMG_PADDING,
+        paddingRight: IMG_PADDING
+      }}
+    >
+      <div className='relative'>
+        <StickyImageVer2 imgUrl={imgUrl} />
+      </div>
+      {children}
+    </div>
+  );
+};
 const StickyImage = ({ imgUrl }: { imgUrl: string }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -93,6 +120,39 @@ const StickyImage = ({ imgUrl }: { imgUrl: string }) => {
   );
 };
 
+const StickyImageVer2 = ({ imgUrl }: { imgUrl: string }) => {
+  const targetRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ['end end', 'end start']
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+
+  return (
+    <motion.div
+      style={{
+        backgroundImage: `url(${imgUrl})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: `calc(100vh - ${IMG_PADDING * 2}px)`,
+        top: IMG_PADDING,
+        scale
+      }}
+      ref={targetRef}
+      className='sticky z-0 overflow-hidden rounded-3xl'
+    >
+      <motion.div
+        className='absolute inset-0'
+        style={{
+          opacity
+        }}
+      />
+    </motion.div>
+  );
+};
+
 const OverlayCopy = ({ subheading, heading }: { subheading: string; heading: string }) => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -112,30 +172,36 @@ const OverlayCopy = ({ subheading, heading }: { subheading: string; heading: str
       ref={targetRef}
       className='absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center text-white'
     >
-      <p className='mb-2 text-center text-xl md:mb-4 md:text-3xl'>{subheading}</p>
-      <p className='text-center text-4xl font-bold md:text-7xl'>{heading}</p>
+    
+      <GradualSpacing
+        text={subheading}
+        className='text-center text-4xl   md:text-7xl '
+      />
     </motion.div>
   );
 };
 
-const ExampleContent = () => (
+const ExampleContent = ({ data, indexNumber }: any) => (
   <div className='mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12'>
-    <h2 className='col-span-1 text-3xl font-bold md:col-span-4'>
-      Additional content explaining the above card here
-    </h2>
+
+      <h2 className='col-span-1 text-3xl font-bold md:col-span-4'>{data.Heading[indexNumber]}</h2>
+  
     <div className='col-span-1 md:col-span-8'>
-      <p className='mb-4 text-xl text-neutral-600 md:text-2xl'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, blanditiis soluta eius quam
-        modi aliquam quaerat odit deleniti minima maiores voluptate est ut saepe accusantium maxime
-        doloremque nulla consectetur possimus.
-      </p>
-      <p className='mb-8 text-xl text-neutral-600 md:text-2xl'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium reiciendis blanditiis
-        aliquam aut fugit sint.
-      </p>
-      <button className='w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit'>
-        Learn more <FiArrowUpRight className='inline' />
-      </button>
+      <BoxReveal>
+        <p className='mb-4 text-xl text-neutral-600 md:text-2xl'>
+          {data.ContentDescription1[indexNumber]}
+        </p>
+      </BoxReveal>
+      <BoxReveal>
+        <p className='mb-8 text-xl text-neutral-600 md:text-2xl'>
+          {data.ContentDescription2[indexNumber]}
+        </p>
+      </BoxReveal>
+      <BoxReveal>
+        <button className='w-full rounded bg-neutral-900 px-9 py-4 text-xl text-white transition-colors hover:bg-neutral-700 md:w-fit'>
+          Learn more <FiArrowUpRight className='inline' />
+        </button>
+      </BoxReveal>
     </div>
   </div>
 );

@@ -151,10 +151,42 @@ export const PROJECTS_CONSTANTS = [
 export const ProjectData = [
   {
     id: '0',
-    title: 'This is for content1'
+    title: 'JCI Regatta Organization',
+    imgroute1: '/PROJECTASSET/JCI/JCI_1.webp',
+    imgroute2: '/PROJECTASSET/JCI/JCI_2.webp',
+    imgroute3: '/PROJECTASSET/JCI/JCI_3.webp',
+    Heading: ['What is JCI', 'How Did i Make it', 'What i Learned'],
+    subHeading: '',
+    ContentTitle: '',
+    ContentDescription1: [
+      "The JCI Regatta Iloilo website provides information about the organization's mission, history, and activities.",
+      'I built this website for JCI Regatta Iloilo using Astro for its robust static site generation, Tailwind CSS for efficient and responsive styling, and EmailJS for seamless email integration',
+      'Through this project, I learned to effectively use Astro for static site generation, Tailwind CSS for responsive design, and EmailJS for integrating email functionality. '
+    ],
+    ContentDescription2: [
+      ' Established in 2009, JCI Regatta aims to develop leaders through various programs focused on community impact, personal development, and cultural heritage preservation. Key programs include The Outstanding Students of Iloilo Awards, Balangaw (for persons with special needs), and Panublion (cultural affairs).',
+      'This combination allowed me to create a dynamic, visually appealing, and functional site that effectively showcases the organizations mission, programs, and achievements.',
+      'I enhanced my skills in creating dynamic and engaging websites. This experience also deepened my understanding of building websites for community organizations like JCI Regatta Iloilo.'
+    ]
   },
   {
     id: '1',
-    title: 'this is for content2'
+    title: 'Iphone 15 Web Design',
+    imgroute1: '/PROJECTASSET/IPHONE/Iphone1.webp',
+    imgroute2: '/PROJECTASSET/IPHONE/Iphone2.webp',
+    imgroute3: '/PROJECTASSET/IPHONE/Iphone3.webp',
+    Heading: ['What is This Project About ?', 'How Did i Make it', 'What i Learned'],
+    subHeading: '',
+    ContentTitle: '',
+    ContentDescription1: [
+      'This project is a clone of the Apple website, designed to replicate its sleek design and user interface. It showcases various Apple products and features a responsive layout, demonstrating web development skills and attention to detail.',
+      'I built this project using Next.js for server-side rendering and routing, GSAP for advanced animations and smooth transitions, and Tailwind CSS for responsive and efficient styling',
+      'Through this project, I learned to use Next.js for server-side rendering, GSAP for creating smooth animations, and Tailwind CSS for responsive design. '
+    ],
+    ContentDescription2: [
+      'The clone highlights proficiency in modern web technologies and design principles.',
+      'This combination allowed me to create a visually appealing and interactive clone of the Apple website. The project demonstrates my ability to use modern web technologies to replicate complex designs and functionalities.',
+      'This enhanced my ability to replicate complex web interfaces and improved my skills with modern web development tools.'
+    ]
   }
 ];
