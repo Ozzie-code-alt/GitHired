@@ -152,6 +152,7 @@ export const ProjectData = [
   {
     id: '0',
     title: 'JCI Regatta Organization',
+    link: 'https://jci-regatta-iloilo-astro.vercel.app/',
     imgroute1: '/PROJECTASSET/JCI/JCI_1.webp',
     imgroute2: '/PROJECTASSET/JCI/JCI_2.webp',
     imgroute3: '/PROJECTASSET/JCI/JCI_3.webp',
@@ -172,6 +173,7 @@ export const ProjectData = [
   {
     id: '1',
     title: 'Iphone 15 Web Design',
+    link: 'https://apple-webclone-beta.vercel.app/',
     imgroute1: '/PROJECTASSET/IPHONE/Iphone1.webp',
     imgroute2: '/PROJECTASSET/IPHONE/Iphone2.webp',
     imgroute3: '/PROJECTASSET/IPHONE/Iphone3.webp',
@@ -192,6 +194,7 @@ export const ProjectData = [
   {
     id: '2',
     title: 'PurfectCompanions',
+    link: 'https://adopt-a-cat.wordpress.com/',
     imgroute1: '/PROJECTASSET/purrFect/cat1.webp',
     imgroute2: '/PROJECTASSET/purrFect/cat2.webp',
     imgroute3: '/PROJECTASSET/purrFect/cat3.webp',
@@ -212,6 +215,7 @@ export const ProjectData = [
   {
     id: '3',
     title: 'Putok Truno Camp Area',
+    link: 'https://starlight-six.vercel.app/',
     imgroute1: '/PROJECTASSET/camp/camp1.webp',
     imgroute2: '/PROJECTASSET/camp/camp2.webp',
     imgroute3: '/PROJECTASSET/camp/camp3.webp',
@@ -232,6 +236,7 @@ export const ProjectData = [
   {
     id: '4',
     title: 'Creative Studio Website',
+    link: 'https://promises-3.vercel.app/',
     imgroute1: '/PROJECTASSET/PROM/creative1.webp',
     imgroute2: '/PROJECTASSET/PROM/creative2.webp',
     imgroute3: '/PROJECTASSET/PROM/creative3.webp',
@@ -253,6 +258,7 @@ export const ProjectData = [
     id: '5',
     title: 'HOO-Bank Web App',
     imgroute1: '/PROJECTASSET/Bank/bank1.webp',
+    link: 'https://blue-horizon-xi.vercel.app/',
     imgroute2: '/PROJECTASSET/Bank/bank2.webp',
     imgroute3: '/PROJECTASSET/Bank/bank3.webp',
     Heading: ['What is This Project About ?', 'How Did i Make it', 'What i Learned'],
@@ -273,6 +279,7 @@ export const ProjectData = [
     id: '6',
     title: 'Lakbay',
     imgroute1: '/PROJECTASSET/Bank/bank1.webp',
+    link: '',
     imgroute2: '/PROJECTASSET/Bank/bank2.webp',
     imgroute3: '/PROJECTASSET/Bank/bank3.webp',
     Heading: ['What is This Project About ?', 'How Did i Make it', 'What i Learned'],
@@ -293,6 +300,7 @@ export const ProjectData = [
     id: '7',
     title: 'Open Bible Web App',
     imgroute1: '/PROJECTASSET/Bible/bible1.webp',
+    link: 'https://hackathon-website-gilt.vercel.app/',
     imgroute2: '/PROJECTASSET/Bible/bible1.webp',
     imgroute3: '/PROJECTASSET/Bible/bible1.webp',
     Heading: ['What is This Project About ?', 'How Did i Make it', 'What i Learned'],
