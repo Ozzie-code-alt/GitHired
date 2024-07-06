@@ -228,5 +228,85 @@ export const ProjectData = [
       'This combination enabled me to build an interactive and visually appealing platform.',
       'Additionally, I improved my ability to create a seamless and engaging user experience for travelers.'
     ]
+  },
+  {
+    id: '4',
+    title: 'Creative Studio Website',
+    imgroute1: '/PROJECTASSET/PROM/creative1.webp',
+    imgroute2: '/PROJECTASSET/PROM/creative2.webp',
+    imgroute3: '/PROJECTASSET/PROM/creative3.webp',
+    Heading: ['What is This Project About ?', 'How Did i Make it', 'What i Learned'],
+    subHeading: '',
+    ContentTitle: '',
+    ContentDescription1: [
+      'The "Promises" project offers wedding and creative photography services, focusing on capturing special moments with personalized experiences.',
+      'I made this project using Next.js for the framework, Framer Motion for animations, and Tailwind CSS for styling.',
+      'I learned how to effectively use Next.js for building web applications, and how to create smooth animations with Framer Motion.'
+    ],
+    ContentDescription2: [
+      'The aim is to make clients feel special and provide timeless photography for their important events.',
+      'The email functionality is handled using the EmailJS API. All these components are managed with useContextAPI for state management.',
+      'I also gained experience in styling with Tailwind CSS and managing state using useContextAPI. Additionally, I learned to integrate and utilize the EmailJS API for handling email functionality.'
+    ]
+  },
+  {
+    id: '5',
+    title: 'HOO-Bank Web App',
+    imgroute1: '/PROJECTASSET/Bank/bank1.webp',
+    imgroute2: '/PROJECTASSET/Bank/bank2.webp',
+    imgroute3: '/PROJECTASSET/Bank/bank3.webp',
+    Heading: ['What is This Project About ?', 'How Did i Make it', 'What i Learned'],
+    subHeading: '',
+    ContentTitle: '',
+    ContentDescription1: [
+      'This project is a financial service platform that helps users manage payments, billing, and invoicing. It offers secure, reliable, and user-friendly tools to handle credit card transactions and financial operations, aiming to simplify business growth. ',
+      'I made this project using Next.js for the web framework, Framer Motion for animations, and Tailwind CSS for styling.',
+      'I learned how to use Next.js for efficient web application development and how to create engaging animations with Framer Motion.'
+    ],
+    ContentDescription2: [
+      "The platform is designed to improve users' financial life by offering rewards, balance transfer options, and robust security features. ",
+      'These tools allowed for efficient development, smooth transitions, and a modern design. The combination provided a seamless and responsive user experience.',
+      'I also gained skills in styling with Tailwind CSS, enhancing the visual appeal and responsiveness of the project. This experience improved my ability to integrate multiple technologies for a seamless user experience.'
+    ]
+  },
+  {
+    id: '6',
+    title: 'Lakbay',
+    imgroute1: '/PROJECTASSET/Bank/bank1.webp',
+    imgroute2: '/PROJECTASSET/Bank/bank2.webp',
+    imgroute3: '/PROJECTASSET/Bank/bank3.webp',
+    Heading: ['What is This Project About ?', 'How Did i Make it', 'What i Learned'],
+    subHeading: '',
+    ContentTitle: '',
+    ContentDescription1: [
+      'This project is a financial service platform that helps users manage payments, billing, and invoicing. It offers secure, reliable, and user-friendly tools to handle credit card transactions and financial operations, aiming to simplify business growth. ',
+      'I made this project using Next.js for the web framework, Framer Motion for animations, and Tailwind CSS for styling.',
+      'I learned how to use Next.js for efficient web application development and how to create engaging animations with Framer Motion.'
+    ],
+    ContentDescription2: [
+      "The platform is designed to improve users' financial life by offering rewards, balance transfer options, and robust security features. ",
+      'These tools allowed for efficient development, smooth transitions, and a modern design. The combination provided a seamless and responsive user experience.',
+      'I also gained skills in styling with Tailwind CSS, enhancing the visual appeal and responsiveness of the project. This experience improved my ability to integrate multiple technologies for a seamless user experience.'
+    ]
+  },
+  {
+    id: '7',
+    title: 'Open Bible Web App',
+    imgroute1: '/PROJECTASSET/Bible/bible1.webp',
+    imgroute2: '/PROJECTASSET/Bible/bible1.webp',
+    imgroute3: '/PROJECTASSET/Bible/bible1.webp',
+    Heading: ['What is This Project About ?', 'How Did i Make it', 'What i Learned'],
+    subHeading: '',
+    ContentTitle: '',
+    ContentDescription1: [
+      'The project is a platform designed to help evangelists track and analyze discussion topics to create detailed statistical reviews.',
+      'I made this project using HTML, CSS, and JavaScript. HTML was used to structure the content, while CSS was employed for styling and visual design. ',
+      'I learned how to effectively use HTML, CSS, and JavaScript to build a functional and visually appealing project. '
+    ],
+    ContentDescription2: [
+      'It aims to provide insights into which issues are most relevant and need to be addressed. The platform also includes a team of developers and designers who contribute to its creation and maintenance.',
+      'JavaScript added interactivity and functionality to enhance the user experience.',
+      'This experience enhanced my understanding of web development principles, including structuring content with HTML and designing layouts with CSS. Additionally, I improved my skills in adding interactivity and dynamic features with JavaScript, enabling me to create more engaging user experiences.'
+    ]
   }
 ];
