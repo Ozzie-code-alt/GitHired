@@ -60,13 +60,13 @@ const AnimatedSplash = () => {
               duration: 2,
               delay: 5.0
             }}
-            className='ml-80 mt-96 text-9xl font-black italic tracking-widest text-white'
+            className='ml-80 mt-96 text-9xl font-black italic tracking-widest text-blue-500'
           >
             SANTOS
           </motion.div>
         </div>
       </div>
-      <div className='absolute top-0 left-0 right-0 h-full w-full'>
+      {/* <div className='absolute top-0 left-0 right-0 h-full w-full'>
         <motion.div
           initial={{ scale: 4, opacity: 0, rotate: 20 }}
           animate={{ scale: 1, opacity: 1, rotate: 0 }}
@@ -80,7 +80,7 @@ const AnimatedSplash = () => {
         >
           <img src='/shoes.png' alt='' className='mr-10 w-[1150px]' />
         </motion.div>
-      </div>
+      </div> */}
     </div>
   );
 };
