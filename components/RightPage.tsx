@@ -52,21 +52,24 @@ const RightPage = ({ first }: RightPageProps) => {
                     animate={inViews.current[index] ? 'visible' : 'hidden'}
                     variants={slideInFromBottom(0.5)}
                     key={index}
-                    className='border-2 relative rounded-lg h-auto'
+                    className='border hover:border-none relative group flex flex-col justify-center items-center rounded-lg h-auto'
                   >
                     <Image
                       src={item.img}
                       alt='justin'
                       width={1080}
                       height={720}
-                      className='object-cover'
+                      className='object-cover shadow-2xl cursor-pointer group-hover:scale-105 transition-all duration-500 ease-in-out rounded-t-lg'
+                      onClick={() => {
+                        router.push(`/projects/${index}`);
+                      }}
                     />
                     <div
-                      className={`flex gap-5 px-2 rounded-lg left-5 bottom-20 absolute ${item.value === '1' ? 'bg-[#D3D2FF]' : item.value === '2' ? 'bg-[#FFDDD2]' : item.value === '3' ? 'bg-[#D2FFF2]' : 'bg-[#D2F7FF]'}`}
+                      className={`flex gap-5 px-2 rounded-lg group-hover:opacity-0 duration-500 ease-out transition-all left-5 bottom-20 absolute ${item.value === '1' ? 'bg-[#D3D2FF]' : item.value === '2' ? 'bg-[#FFDDD2]' : item.value === '3' ? 'bg-[#D2FFF2]' : 'bg-[#D2F7FF]'}`}
                     >
                       {item.tags.join(', ')}
                     </div>
-                    <div className='flex justify-between px-5 py-5 w-full'>
+                    <div className='flex justify-between border-l-2 group-hover:bg-black group-hover:text-white  duration-500 ease-out transition-all border-b-2 border-r-2 border-gray-500 rounded-b-lg px-5 py-5 w-full'>
                       <div className='dark:text-white'>{item.title}</div>
                       <div className='dark:text-white'>
                         <a href={item.route} target='_blank'>

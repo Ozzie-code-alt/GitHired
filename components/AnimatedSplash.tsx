@@ -43,7 +43,7 @@ const AnimatedSplash = () => {
               duration: 2,
               delay: 5.0
             }}
-            className='mr-80 mb-72 text-9xl font-black italic tracking-widest text-white'
+            className='md:mr-80 md:mb-72 text-6xl md:text-9xl font-black italic tracking-widest text-white'
           >
             JUSTIN
           </motion.div>
@@ -60,7 +60,7 @@ const AnimatedSplash = () => {
               duration: 2,
               delay: 5.0
             }}
-            className='ml-80 mt-96 text-9xl font-black italic tracking-widest text-blue-500'
+            className=' md:ml-80 mt-36 md:mt-96 text-6xl md:text-9xl font-black italic tracking-widest text-blue-500'
           >
             SANTOS
           </motion.div>

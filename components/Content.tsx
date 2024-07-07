@@ -22,7 +22,7 @@ const Content = () => {
     setMode((prevMode) => {
       const newMode = prevMode === 'light' ? 'dark' : 'light';
       localStorage.setItem('Mode', newMode);
-      window.dispatchEvent(new Event('storage')); // Manually dispatch the storage event
+      window.dispatchEvent(new Event('storage')); 
       return newMode;
     });
   };
@@ -32,7 +32,7 @@ const Content = () => {
   }, [mode]);
 
   return (
-    <div className='w-full  relative  lg:h-screen px-3 gap-5  sm:px-10 py-10 flex flex-col  lg:flex-row'>
+    <div className='w-full  relative h-auto  lg:h-screen px-3 gap-5  sm:px-10 py-10 flex flex-col  lg:flex-row'>
       {/*Left */}
       <div className='w-full relative  lg:w-[40%] h-full opacity-1'>
         <motion.div
@@ -71,7 +71,7 @@ const Content = () => {
           variants={slideInFromBottom(0.7)}
         />
 
-        <div className='hidden lg:flex flex-col gap-5 justify-between w-full h-[50%]  '>
+        <div className='hidden lg:flex flex-col gap-5 justify-between w-full  h-[70%] pb-20  '>
           <motion.div
             className=''
             initial='hidden'

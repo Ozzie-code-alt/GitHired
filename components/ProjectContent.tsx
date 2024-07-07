@@ -170,7 +170,7 @@ const OverlayCopy = ({ subheading, heading }: { subheading: string; heading: str
       ref={targetRef}
       className='absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center text-white'
     >
-      <GradualSpacing text={subheading} className='text-center text-4xl   md:text-7xl ' />
+      <GradualSpacing text={subheading} className='text-center text-xl lg:text-4xl ' />
     </motion.div>
   );
 };
