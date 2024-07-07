@@ -71,7 +71,7 @@ const Content = () => {
           variants={slideInFromBottom(0.7)}
         />
 
-        <div className='hidden lg:flex flex-col gap-5 justify-between w-full h-[60.4%] '>
+        <div className='hidden lg:flex flex-col gap-5 justify-between w-full h-[50%]  '>
           <motion.div
             className=''
             initial='hidden'
