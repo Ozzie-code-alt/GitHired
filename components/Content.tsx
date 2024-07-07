@@ -81,7 +81,7 @@ const Content = () => {
             <Checkboxes upData={handleData} />
           </motion.div>
 
-          <div className=' flex flex-col-reverse gap-5  w-fit  justify-center items-center '>
+          <div className=' flex  gap-5  w-fit  justify-center items-center '>
             <Footer />
             <LittleMascot />
           </div>

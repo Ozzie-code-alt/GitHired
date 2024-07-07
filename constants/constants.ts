@@ -95,7 +95,7 @@ export const PROJECTS_CONSTANTS = [
     img: '/Projects/AppleWebclone.webp',
     tags: ['React', 'GSAP', 'Tailwind'],
     value: '3',
-    route: 'https://apple-webclone-beta.vercel.app/',
+    route: 'https://iphone-doc.vercel.app/',
     transition: 'red-box'
   },
   {
