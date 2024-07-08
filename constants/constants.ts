@@ -32,7 +32,7 @@ export const LEFTNAV_CONSTANTS = [
 
 export const CHECKBOXES_CONSTANTS = [
   {
-    title: 'Next JS',
+    title: 'NextJs',
     value: '1'
   },
   {
@@ -91,7 +91,7 @@ export const PROJECTS_CONSTANTS = [
     transition: 'Effect2'
   },
   {
-    title: 'Apple Iphone 15 Web Clone ',
+    title: 'Apple Iphone 15',
     img: '/Projects/AppleWebclone.webp',
     tags: ['React', 'GSAP', 'Tailwind'],
     value: '3',

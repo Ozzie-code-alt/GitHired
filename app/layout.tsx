@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <ThemeProvider>
-      <div className={`${inter.className}  dark:bg-black lg:overflow-hidden`}>
+      <div className={`${inter.className} dark:bg-black lg:overflow-hidden`}>
         {children}
         <Analytics />
         <SpeedInsights />
