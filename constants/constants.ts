@@ -95,7 +95,7 @@ export const PROJECTS_CONSTANTS = [
     img: '/Projects/AppleWebclone.webp',
     tags: ['React', 'GSAP', 'Tailwind'],
     value: '3',
-    route: 'https://iphone-doc.vercel.app/',
+    route: 'https://apple-webclone-beta.vercel.app/',
     transition: 'red-box'
   },
   {
@@ -173,7 +173,7 @@ export const ProjectData = [
   {
     id: '1',
     title: 'Iphone 15 Web Design',
-    link: 'https://iphone-doc.vercel.app/',
+    link: 'https://apple-webclone-beta.vercel.app/',
     imgroute1: '/PROJECTASSET/IPHONE/Iphone1.webp',
     imgroute2: '/PROJECTASSET/IPHONE/Iphone2.webp',
     imgroute3: '/PROJECTASSET/IPHONE/Iphone3.webp',
