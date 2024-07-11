@@ -145,6 +145,14 @@ export const PROJECTS_CONSTANTS = [
     value: '3',
     route: 'https://hackathon-website-gilt.vercel.app/',
     transition: 'red-box'
+  },
+  {
+    title: 'WeaveIT',
+    img: '/Projects/weaveIT.webp',
+    tags: ['Wordpress', 'Elementor'],
+    value: '5',
+    route: 'https://cookiecompa8.wordpress.com/',
+    transition: 'red-box'
   }
 ];
 
@@ -315,6 +323,27 @@ export const ProjectData = [
       'It aims to provide insights into which issues are most relevant and need to be addressed. The platform also includes a team of developers and designers who contribute to its creation and maintenance.',
       'JavaScript added interactivity and functionality to enhance the user experience.',
       'This experience enhanced my understanding of web development principles, including structuring content with HTML and designing layouts with CSS. Additionally, I improved my skills in adding interactivity and dynamic features with JavaScript, enabling me to create more engaging user experiences.'
+    ]
+  },
+  {
+    id: '8',
+    title: 'WeaveIT',
+    imgroute1: '/PROJECTASSET/weaveIT/weaveIT.webp',
+    link: 'https://cookiecompa8.wordpress.com/',
+    imgroute2: '/PROJECTASSET/weaveIT/weaveIT2.webp',
+    imgroute3: '/PROJECTASSET/weaveIT/weaveIT3.webp',
+    Heading: ['What is This Project About ?', 'How Did i Make it', 'What i Learned'],
+    subHeading: '',
+    ContentTitle: '',
+    ContentDescription1: [
+      'The "WeaveIT" website showcases high-quality textiles blending traditional and modern designs, emphasizing ethical sourcing and cultural preservation by working with local weavers in the Philippines.',
+      "I created it using WordPress and Elementor. By leveraging WordPress's versatile platform and Elementor's drag-and-drop capabilities, I built a visually appealing and functional website.",
+      'I learned how to effectively use WordPress and Elementor to build a website.  '
+    ],
+    ContentDescription2: [
+      'They offer a wide range of fabrics and custom services like dyeing, weaving, and printing for specific projects.',
+      'These tools allowed for efficient customization and design.',
+      'This process taught me about the importance of design flexibility and user-friendly interfaces. Additionally, I gained insight into optimizing website functionality and visual appeal.'
     ]
   }
 ];
