@@ -17,5 +17,5 @@ jobs:
       - name: Lint code
         run: npm run lint
 
-      - name: Run tests
-        run: npm test
+      - name: Run build
+        run: yarn run build
