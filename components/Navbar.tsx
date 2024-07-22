@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CgMenuMotion } from 'react-icons/cg';
-import SpringModal from './Modal';
+
+
 
 function Navbar() {
   const [click, setOnClick] = useState(false);
@@ -11,7 +12,7 @@ function Navbar() {
         <div>
           <CgMenuMotion className=' dark:text-white text-[30px] cursor-pointer' onClick={()=>{setOnClick(true)}} />
         </div>
-        <SpringModal isOpen={click} setIsOpen={setOnClick} />
+    
       </div>
       <div className='border  ' />
     </div>

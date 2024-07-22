@@ -88,7 +88,7 @@ const Content = () => {
         </div>
       </div>
       {/*Right */}
-      <div className='w-full flex flex-col gap-5 px-3 sm:px-10 lg:overflow-y-auto '>
+      <div className='w-full flex flex-col gap-5 px-3 sm:px-10  '>
         <RightPage first={first} />
       </div>
 

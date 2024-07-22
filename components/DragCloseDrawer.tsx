@@ -6,7 +6,7 @@ import { IconCloudDemo } from './Icon-Cloud';
 export const DragCloseDrawerExample = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className='grid  place-content-center '>
+    <div className='grid lg:!w-screen w-auto h-auto  lg:!h-screen  place-content-center  '>
       <button
         onClick={() => setOpen(true)}
         className='rounded bg-indigo-500  px-4 py-2 text-white transition-colors hover:bg-indigo-600'
@@ -14,8 +14,8 @@ export const DragCloseDrawerExample = () => {
         More About Me
       </button>
 
-      <DragCloseDrawer open={open} setOpen={setOpen}>
-        <div className='mx-auto max-w-2xl space-y-4 text-neutral-400'>
+      <DragCloseDrawer open={open} setOpen={setOpen} >
+        <div className='mx-auto  max-w-2xl md:h-[70%] md:overflow-y-scroll space-y-4 z-50  text-neutral-400'>
           <div className=' flex justify-center'>
             <IconCloudDemo />
           </div>
