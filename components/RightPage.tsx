@@ -85,7 +85,16 @@ const RightPage = ({ first }: RightPageProps) => {
         </div>
       ) : (
         <div className='relative w-full  lg:h-[100%]   '>
-          <Divz className='transition-all lg:border-l hidden lg:flex  border-red-500 mb-5  duration-500   '>
+          <small className='text-gray-500'>Made by justin With Blood Sweat and Tears - 2023</small>
+          <Divz
+            className='transition-all lg:border-l hidden lg:flex border-dotted  border-gray-500 mb-5  duration-500   '
+            autoPlay={true}
+            autoPlayDuration={7000}
+            // isDarkMode={true}
+            showNavButtonsOnExpanded={false}
+            showPlayButton={false}
+            showExpandButton={false}
+          >
             {PROJECTS_CONSTANTS.map((item, index) => {
               const [ref, inView] = useInView({
                 triggerOnce: true,
@@ -97,18 +106,21 @@ const RightPage = ({ first }: RightPageProps) => {
               return (
                 <div
                   key={index}
-                  className='border hover:border-none  absolute xl:py-8  !w-[80%] group flex flex-col  justify-center items-center rounded-lg'
+                  className='border hover:border-none  absolute  !w-[80%] group flex flex-col  justify-center items-center rounded-lg'
                 >
-                  <Image
-                    src={item.img}
-                    alt='justin'
-                    width={1080}
-                    height={720}
-                    className='object-cover shadow-2xl cursor-pointer group-hover:scale-105 transition-all duration-500 ease-in-out rounded-t-lg'
-                    onClick={() => {
-                      router.push(`/projects/${index}`);
-                    }}
-                  />
+                  <a
+                    href={`/projects/${index}`}
+                    target='#blank'
+                    
+                  >
+                    <Image
+                      src={item.img}
+                      alt='justin'
+                      width={1080}
+                      height={720}
+                      className='object-cover shadow-2xl cursor-pointer  group-hover:scale-105 transition-all duration-500 ease-in-out rounded-t-lg'
+                    />
+                  </a>
                   <div
                     className={`flex gap-5 px-2 rounded-lg group-hover:opacity-0 duration-500 ease-out transition-all left-5 bottom-20 absolute ${
                       item.value === '1'
@@ -122,14 +134,7 @@ const RightPage = ({ first }: RightPageProps) => {
                   >
                     {item.tags.join(', ')}
                   </div>
-                  <div className='flex justify-between border-l-2 group-hover:bg-black group-hover:text-white  duration-500 ease-out transition-all border-b-2 border-r-2 border-gray-500 rounded-b-lg px-5 py-5 w-full'>
-                    <div className='dark:text-white'>{item.title}</div>
-                    <div className='dark:text-white'>
-                      <a href={item.route} target='_blank'>
-                        <button>View Project</button>
-                      </a>
-                    </div>
-                  </div>
+             
                 </div>
               );
             })}

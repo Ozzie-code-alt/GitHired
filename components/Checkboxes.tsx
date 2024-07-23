@@ -22,11 +22,11 @@ const Checkboxes: React.FC<CheckboxesProps> = ({ upData }) => {
   };
   return (
     <div className='w-full '>
-      <div className='grid grid-cols-3 gap-2 w-fit '>
+      <div className='flex  gap-2  max-w-[700px] lg:max-w-[400px]  flex-wrap '>
         {CHECKBOXES_CONSTANTS.map((item, index) => (
           <div
             key={index}
-            className={`w-full px-2  
+            className={`w-fit px-2 
           border gap-2 rounded-full  font-checkboxes flex justify-center items-center
             ${
               item.value === '1'
@@ -36,9 +36,9 @@ const Checkboxes: React.FC<CheckboxesProps> = ({ upData }) => {
                   : item.value === '3'
                     ? 'bg-[#D2FFF2]'
                     : item.value === '4'
-                      ? 'bg-[#D2F7FF]'
+                      ? 'bg-[#FFFBD2]'
                       : item.value === '5'
-                        ? 'bg-[#FFFBD2]'
+                        ? 'bg-[#D2F7FF]'
                         : item.value === '6'
                           ? 'bg-[#FFDDD2]'
                           : item.value === '7'

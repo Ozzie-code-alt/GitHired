@@ -14,11 +14,11 @@ const LeftNav = () => {
 
   const [open, setOpen] = useState(false);
   return (
-    <div className='hidden lg:flex justify-between'>
+    <div className='hidden lg:flex  gap-5'>
       {LEFTNAV_CONSTANTS.map((item, index) => (
         <Modal key={index}>
           <ModalTrigger
-            className={`rounded-3xl  border-2 border-dashed hover:scale-105  duration-700 ease-in-out  px-6 flex justify-center hover:cursor-pointer items-center uppercase text-black transition-all  hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
+            className={`rounded-3xl  border-2 border-dashed hover:scale-105 z-[10] duration-700 ease-in-out  px-6 flex justify-center hover:cursor-pointer items-center uppercase text-black transition-all  hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_black] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none"
                ${
                  item.value == '1'
                    ? '     bg-[rgba(255,0,247,.3)]  border-[rgba(255,0,246,.8)]  text-[#680045] '
@@ -33,13 +33,22 @@ const LeftNav = () => {
           </ModalTrigger>
           <ModalBody>
             <ModalContent>
-              <h4 className='text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8'>
-                Book your trip to{' '}
-                <span className='px-1 py-0.5 rounded-md bg-gray-100 dark:bg-neutral-800 dark:border-neutral-700 border border-gray-200'>
-                  Bali
-                </span>{' '}
-                now! ✈️
-              </h4>
+              {item.value == '1' ? (
+                <h4 className='text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8'>
+                  Justin
+          
+                </h4>
+              ) : item.value == '2' ? (
+                <h4 className='text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8'>
+                  Menu
+           
+                </h4>
+              ) : (
+                <h4 className='text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8'>
+                  Projects
+                </h4>
+              )}
+
               <div className='flex justify-center items-center'>
                 {images.map((image, idx) => (
                   <motion.div

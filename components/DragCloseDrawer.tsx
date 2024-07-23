@@ -15,7 +15,7 @@ export const DragCloseDrawerExample = () => {
       </button>
 
       <DragCloseDrawer open={open} setOpen={setOpen} >
-        <div className='mx-auto  max-w-2xl md:h-[70%] md:overflow-y-scroll space-y-4 z-50  text-neutral-400'>
+        <div className='mx-auto  max-w-xl md:h-[70%] md:overflow-y-scroll space-y-4 z-50  text-neutral-400'>
           <div className=' flex justify-center'>
             <IconCloudDemo />
           </div>

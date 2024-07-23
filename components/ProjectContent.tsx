@@ -7,7 +7,7 @@ import BoxReveal from './sub-components/animatedBoxtext';
 
 export const ProjectParallaxContent = ({ projectData }: any) => {
   return (
-    <div className='bg-white '>
+    <div className='bg-white overflow-visible '>
       <TextParallaxContent
         imgUrl={projectData.imgroute1}
         subheading={projectData.title}

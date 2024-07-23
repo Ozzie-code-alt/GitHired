@@ -53,11 +53,11 @@ export const CHECKBOXES_CONSTANTS = [
   },
   {
     title: 'Tailwind',
-    value: '6'
+    value: '1'
   },
   {
     title: 'Framer',
-    value: '7'
+    value: '2'
   },
   {
     title: 'Wordpress',
@@ -65,7 +65,7 @@ export const CHECKBOXES_CONSTANTS = [
   },
   {
     title: 'Elementor',
-    value: '2'
+    value: '4'
   }
 ];
 
