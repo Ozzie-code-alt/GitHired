@@ -87,7 +87,7 @@ const RightPage = ({ first }: RightPageProps) => {
         <div className='relative w-full  lg:h-[100%]   '>
           <small className='text-gray-500'>Made by justin With Blood Sweat and Tears - 2023</small>
           <Divz
-            className='transition-all lg:border-l hidden lg:flex border-dotted  border-gray-500 mb-5  duration-500   '
+            className='transition-all lg:border-l hidden lg:flex border-dotted bg-none  border-gray-500 mb-5  duration-500   '
             autoPlay={true}
             autoPlayDuration={7000}
             // isDarkMode={true}
@@ -114,7 +114,7 @@ const RightPage = ({ first }: RightPageProps) => {
                       alt='justin'
                       width={1080}
                       height={720}
-                      className='object-cover object-center shadow-black shadow-2xl cursor-pointer  group-hover:scale-105 transition-all duration-500 ease-in-out rounded-t-lg'
+                      className='object-cover object-center shadow-2xl cursor-pointer  group-hover:scale-105 transition-all duration-500 ease-in-out rounded-t-lg'
                     />
                   </a>
                   <div

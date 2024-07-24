@@ -6,8 +6,7 @@
     display: none;
 }
 .divz-item{
-    background-color: none !important;
-}
+@apply bg-none }
 
 ::-webkit-scrollbar {
     width: 8px;
