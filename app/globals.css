@@ -5,7 +5,9 @@
 ::-webkit-scrollbar-button {
     display: none;
 }
-
+.divz-item{
+    background-color: none !important;
+}
 
 ::-webkit-scrollbar {
     width: 8px;

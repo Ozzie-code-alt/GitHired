@@ -106,19 +106,15 @@ const RightPage = ({ first }: RightPageProps) => {
               return (
                 <div
                   key={index}
-                  className='border hover:border-none  absolute  !w-[80%] group flex flex-col  justify-center items-center rounded-lg'
+                  className=' absolute  h-fit !w-[80%] group flex flex-col  justify-center items-center rounded-lg'
                 >
-                  <a
-                    href={`/projects/${index}`}
-                    target='#blank'
-                    
-                  >
+                  <a href={`/projects/${index}`} target='#blank'>
                     <Image
                       src={item.img}
                       alt='justin'
                       width={1080}
                       height={720}
-                      className='object-cover shadow-2xl cursor-pointer  group-hover:scale-105 transition-all duration-500 ease-in-out rounded-t-lg'
+                      className='object-cover object-center shadow-black shadow-2xl cursor-pointer  group-hover:scale-105 transition-all duration-500 ease-in-out rounded-t-lg'
                     />
                   </a>
                   <div
@@ -134,7 +130,6 @@ const RightPage = ({ first }: RightPageProps) => {
                   >
                     {item.tags.join(', ')}
                   </div>
-             
                 </div>
               );
             })}
