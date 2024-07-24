@@ -1,5 +1,3 @@
-import { title } from 'process';
-
 export const LEFTNAV_CONSTANTS = [
   {
     title: 'Justin',
@@ -84,7 +82,7 @@ export const FOOTER_CONSTANTS = [
 export const PROJECTS_CONSTANTS = [
   {
     title: 'JCI Regatta Origanization',
-    img: '/Projects/JCI.webp',
+    img: '/Projects/JCI1.webp',
     tags: ['Astro', 'Tailwind'],
     value: '2',
     route: 'https://jci-regatta-iloilo-astro.vercel.app/',
@@ -92,7 +90,7 @@ export const PROJECTS_CONSTANTS = [
   },
   {
     title: 'Apple Iphone 15',
-    img: '/Projects/AppleWebclone.webp',
+    img: '/Projects/AppleWebclone1.webp',
     tags: ['React', 'GSAP', 'Tailwind'],
     value: '3',
     route: 'https://apple-webclone-beta.vercel.app/',
@@ -100,7 +98,7 @@ export const PROJECTS_CONSTANTS = [
   },
   {
     title: 'PurrfectCompanions',
-    img: '/Projects/Purrfect.webp',
+    img: '/Projects/Purrfect1.webp',
     tags: ['Wordpress', 'Elementor'],
     value: '1',
     route: 'https://adopt-a-cat.wordpress.com/',
@@ -108,7 +106,7 @@ export const PROJECTS_CONSTANTS = [
   },
   {
     title: 'Putok Truno Camp',
-    img: '/Projects/PutokCamp.webp',
+    img: '/Projects/PutokCamp1.webp',
     tags: ['React', 'Tailwind'],
     value: '4',
     route: 'https://starlight-six.vercel.app/',
@@ -116,7 +114,7 @@ export const PROJECTS_CONSTANTS = [
   },
   {
     title: 'Wedding - Promises',
-    img: '/Projects/Promises.webp',
+    img: '/Projects/Promises1.webp',
     tags: ['NextJs', 'Framer', 'MongoDB'],
     value: '3',
     route: 'https://promises-3.vercel.app/',
@@ -124,7 +122,7 @@ export const PROJECTS_CONSTANTS = [
   },
   {
     title: 'HooBank - Landing Page',
-    img: '/Projects/BankApp.webp',
+    img: '/Projects/BankApp1.webp',
     tags: ['NextJs', 'Framer', 'Tailwind'],
     value: '2',
     route: 'https://blue-horizon-xi.vercel.app/',
@@ -132,7 +130,7 @@ export const PROJECTS_CONSTANTS = [
   },
   {
     title: 'Lakbay',
-    img: '/Projects/Lakbay.webp',
+    img: '/Projects/Lakbay1.webp',
     tags: ['React', 'CSS'],
     value: '2',
     route: '/project4',
@@ -140,7 +138,7 @@ export const PROJECTS_CONSTANTS = [
   },
   {
     title: 'Open Bible',
-    img: '/Projects/openBible.webp',
+    img: '/Projects/openBible1.webp',
     tags: ['HTML', 'CSS', 'JS'],
     value: '3',
     route: 'https://hackathon-website-gilt.vercel.app/',
@@ -148,7 +146,7 @@ export const PROJECTS_CONSTANTS = [
   },
   {
     title: 'WeaveIT',
-    img: '/Projects/weaveIT.webp',
+    img: '/Projects/weaveIT1.webp',
     tags: ['Wordpress', 'Elementor'],
     value: '5',
     route: 'https://cookiecompa8.wordpress.com/',

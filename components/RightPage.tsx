@@ -106,15 +106,15 @@ const RightPage = ({ first }: RightPageProps) => {
               return (
                 <div
                   key={index}
-                  className=' absolute  h-fit !w-[80%] group flex flex-col  justify-center items-center rounded-lg'
+                  className=' absolute !h-fit  !w-[80%]  group flex flex-col   rounded-lg'
                 >
                   <a href={`/projects/${index}`} target='#blank'>
                     <Image
                       src={item.img}
                       alt='justin'
                       width={1080}
-                      height={720}
-                      className='object-cover object-center shadow-2xl cursor-pointer  group-hover:scale-105 transition-all duration-500 ease-in-out rounded-t-lg'
+                      height={1020}
+                      className='object-contain bg-contain bg-center object-center shadow-2xl cursor-pointer  group-hover:scale-105 transition-all duration-500 ease-in-out rounded-t-lg'
                     />
                   </a>
                   <div
@@ -130,6 +130,14 @@ const RightPage = ({ first }: RightPageProps) => {
                   >
                     {item.tags.join(', ')}
                   </div>
+                  {/* <div className='flex justify-between border-l-2 group-hover:bg-black group-hover:text-white  duration-500 ease-out transition-all border-b-2 border-r-2 border-gray-500 rounded-b-lg px-5 py-5 w-full'>
+                    <div className='dark:text-white'>{item.title}</div>
+                    <div className='dark:text-white'>
+                      <a href={item.route} target='_blank'>
+                        <button>View Project</button>
+                      </a>
+                    </div>
+                  </div> */}
                 </div>
               );
             })}
