@@ -6,7 +6,6 @@ import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { slideInFromBottom } from '@/lib/utils';
-import { DragCloseDrawerExample } from './DragCloseDrawer';
 import { useRouter } from 'next/navigation';
 import { Divz } from 'divz';
 interface RightPageProps {
@@ -142,7 +141,7 @@ const RightPage = ({ first }: RightPageProps) => {
               );
             })}
 
-            <DragCloseDrawerExample />
+          
           </Divz>
           <div className='transition-all flex lg:hidden pb-40 lg:border-l border-slate-500 mb-5  flex-col gap-20 duration-500  sm:px-14 ease-in-out'>
             {PROJECTS_CONSTANTS.map((item, index) => {
@@ -197,7 +196,7 @@ const RightPage = ({ first }: RightPageProps) => {
                 </motion.div>
               );
             })}
-            <DragCloseDrawerExample />
+       
           </div>
         </div>
       )}

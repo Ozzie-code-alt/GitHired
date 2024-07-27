@@ -1,6 +1,8 @@
+import { Icons } from '@/components/sub-components/icons';
+
 export const LEFTNAV_CONSTANTS = [
   {
-    title: 'Justin',
+    title: 'Experience',
     value: '1',
     bgColor: 'bg-[rgba(255,0,247,.3)]',
     borderColor: 'border-[rgba(255,0,246,.8)]',
@@ -9,7 +11,7 @@ export const LEFTNAV_CONSTANTS = [
     py: 'py-2'
   },
   {
-    title: 'Menu',
+    title: 'Contact',
     value: '2',
     bgColor: 'bg-[rgba(0,208,255,.1)]',
     borderColor: 'border-[#00eaff]',
@@ -345,3 +347,122 @@ export const ProjectData = [
     ]
   }
 ];
+
+export const DATA = {
+  work: [
+    {
+      company: 'Prometheus',
+      href: 'https://www.prometheus.ph',
+      badges: [],
+      location: 'Remote',
+      title: 'Associate Software Engineer',
+      logoUrl: '/atomic.png',
+      start: 'September 2023',
+      end: 'Present',
+      description:
+        'As an Associate Software Engineer at Prometheus, I handle full-stack website development, leveraging Next JS for front-end enhancements and MongoDB, Postgres, and Express for back-end systems. Additionally, I create engaging AR filters using Meta Spark Studio for various events and celebrations. Furthermore, I contribute to the design, optimization, and development of mobile applications with React Native and Expo.'
+    },
+    {
+      company: 'Freelance Developer',
+      badges: [],
+      location: 'Remote',
+      title: 'Software Engineer',
+      logoUrl: '/shopify.svg',
+      start: 'June 2022',
+      end: 'Present',
+      description:
+        'As a Freelance/Part-Time Developer, I have worked on projects involving NextJS, MongoDB Atlas/Compass, Prisma, and Cloudinary. Notable projects include developing a feedback form system with facial recognition capabilities for a school using Python, Flask, and Selenium, and creating a cross-platform student monitoring system with NextJS and MongoDB. I primarily handle thesis projects part-time, maintaining effective communication with students to ensure their successful completion.'
+    },
+    {
+      company: 'Daily Guardian',
+      href: 'https://dailyguardian.com.ph',
+      badges: [],
+      location: 'Santa Clara, CA',
+      title: 'Web Developer Intern',
+      logoUrl: '/nvidia.png',
+      start: 'February 2020',
+      end: 'May 2024',
+      description:
+        "I actively participated in the updates and modifications of the Daily Guardian website, collaborating closely with fellow developers and designers. My responsibilities included front-end development using Astro, ensuring the website's responsiveness and user-friendliness across all devices and platforms."
+    },
+    {
+      company: 'Google Developer Student Club',
+      badges: [],
+      location: 'Santa Clara, CA',
+      title: 'Software Developer Volunteer',
+      logoUrl: '/nvidia.png',
+      start: 'February 2020',
+      end: 'May 2024',
+      description:
+        'As the Technical Vice Lead for the Google Developer Student Club, I have undertaken projects involving NextJS, MongoDB Atlas/Compass, Prisma, and Cloudinary. Notable projects include developing a feedback form system with facial recognition capabilities for a school using Python, Flask, and Selenium, and creating a cross-platform student monitoring system with NextJS and MongoDB. I also lead and mentor club members, maintaining effective communication to ensure the successful completion of various technical projects and initiatives.'
+    },
+    {
+      company: 'DevCon',
+      badges: [],
+      location: 'Santa Clara, CA',
+      title: 'Software Developer Volunteer',
+      logoUrl: '/nvidia.png',
+      start: 'February 2020',
+      end: 'May 2024',
+      description:
+        ' At DevCon I am passionate about innovation and take pride in having designed and implemented an AI-powered photo booth, which has significantly enhanced event experiences by capturing memorable moments with cutting-edge technology. Ive also been actively involved in events like DevCon Kids and Game On, contributing to their success and engaging with diverse audiences.'
+    }
+  ],
+  education: [
+    {
+      school: 'Central Philippine University ',
+      href: 'https://cpu.edu.ph',
+      degree: "Bachelor's Degree of Computer Science (BCS)",
+      logoUrl: '/waterloo.png',
+      start: '2020',
+      end: '2024'
+    }
+  ],
+  hackathons: [
+    {
+      title: 'Google Gemini API Developer ',
+      dates: 'May 14 - September 4, 2024',
+      location: 'USA',
+      description:
+        'Developed a mobile application which delivered bedtime stories to children using augmented reality.',
+      image: 'https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-western.png',
+      mlh: 'https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg',
+      links: []
+    },
+    {
+      title: 'Microsoft Imagine Cup',
+      dates: 'December 3rd - April 30th , 2022 - 2023',
+      location: 'Manila, Philippines',
+      description:
+        'Developed a mobile application which delivers university campus wide events in real time to all students.',
+      image: 'https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-the-north.png',
+      mlh: 'https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg',
+      links: []
+    },
+    {
+      title: 'DOST FLExPhD Hackathon',
+      dates: 'January 23rd - February 01th, 2023',
+      location: 'Manila, Philippines',
+      description:
+        'Developed a mobile application which communcicates a victims medical data from inside an ambulance to doctors at hospital.',
+      icon: 'public',
+      image: 'https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/firstnet.png',
+      links: []
+    },
+    {
+      title: 'Indigitous Hackathon',
+      dates: 'October , 2022',
+      location: 'Iloilo, Philippines',
+      description:
+        'Developed a web application which aggregates social media data regarding cryptocurrencies and predicts future prices.',
+      image: 'https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/developer-week.jpg',
+      links: [
+        {
+          title: 'Github',
+          icon: <Icons.github className='h-4 w-4' />,
+          href: 'https://github.com/cryptotrends/cryptotrends'
+        }
+      ]
+    }
+  ]
+} as const;
