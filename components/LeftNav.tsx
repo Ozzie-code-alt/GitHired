@@ -39,7 +39,7 @@ const LeftNav = () => {
             <ModalContent> 
               {item.value == '1' ? (
                 <h4 className='text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8'>
-                  Work Experience
+                  Experience
                 </h4>
               ) : item.value == '2' ? (
                 <h4 className='text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8'>
@@ -52,7 +52,7 @@ const LeftNav = () => {
               )}
 
               {item.value == '1' ? (
-                <div className='mx-auto  w-fit  overflow-y-scroll  no-scrollbar h-screen  space-y-4 z-50  pb-32  text-neutral-400'>
+                <div className='mx-auto  w-fit  overflow-y-scroll  no-scrollbar h-screen  space-y-4 z-50  pb-32  text-slate-800'>
                   <section id='work'>
                     <div className='flex min-h-0 flex-col gap-y-3'>
                       <BlurFade delay={BLUR_FADE_DELAY * 5}>
@@ -96,7 +96,7 @@ const LeftNav = () => {
                     </div>
                   </section>
                   <section id='hackathons'>
-                    <div className='space-y-12  w-full py-12'>
+                    <div className='space-y-12  w-full  py-12'>
                       <BlurFade delay={BLUR_FADE_DELAY * 13}>
                         <div className='flex flex-col items-center justify-center space-y-4 text-center'>
                           <div className='space-y-2'>
@@ -117,7 +117,7 @@ const LeftNav = () => {
                         </div>
                       </BlurFade>
                       <BlurFade delay={BLUR_FADE_DELAY * 14}>
-                        <ul className='mb-4 ml-4 divide-y divide-dashed border-l'>
+                        <ul className='mb-4 ml-4 divide-y px-5 divide-dashed '>
                           {DATA.hackathons.map((project, id) => (
                             <BlurFade
                               key={project.title + project.dates}
@@ -128,7 +128,7 @@ const LeftNav = () => {
                                 description={project.description}
                                 location={project.location}
                                 dates={project.dates}
-                                image={project.image}
+                              
                                 links={project.links}
                               />
                             </BlurFade>
@@ -145,8 +145,6 @@ const LeftNav = () => {
               ) : (
                 <h4 className='text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8'>
                   Projects
-                </h4>
-              )}
               <div className='flex justify-center items-center'>
                 {images.map((image, idx) => (
                   <motion.div
@@ -176,6 +174,8 @@ const LeftNav = () => {
                   </motion.div>
                 ))}
               </div>
+                </h4>
+              )}
             </ModalContent>
             <ModalFooter className='gap-4'>
               <button className='px-2 py-1 bg-gray-200 text-black dark:bg-black dark:border-black dark:text-white border border-gray-300 rounded-md text-sm w-28'>
