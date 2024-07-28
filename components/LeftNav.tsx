@@ -7,6 +7,7 @@ import { IconCloudDemo } from './Icon-Cloud';
 import BlurFade from './sub-components/blur-fade';
 import { ResumeCard } from './resume-card';
 import { HackathonCard } from './sub-components/hackathoncard';
+import Link from 'next/link';
 const LeftNav = () => {
   const images = [
     'https://images.unsplash.com/photo-1517322048670-4fba75cbbb62?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -16,7 +17,6 @@ const LeftNav = () => {
     'https://images.unsplash.com/photo-1546484475-7f7bd55792da?q=80&w=2581&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   ];
   const BLUR_FADE_DELAY = 0.04;
-  const [open, setOpen] = useState(false);
   return (
     <div className='hidden lg:flex   gap-5'>
       {LEFTNAV_CONSTANTS.map((item, index) => (
@@ -36,7 +36,7 @@ const LeftNav = () => {
             </span>
           </ModalTrigger>
           <ModalBody>
-            <ModalContent> 
+            <ModalContent>
               {item.value == '1' ? (
                 <h4 className='text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8'>
                   Experience
@@ -66,7 +66,6 @@ const LeftNav = () => {
                             altText={work.company}
                             title={work.company}
                             subtitle={work.title}
-        
                             badges={work.badges}
                             period={`${work.start} - ${work.end ?? 'Present'}`}
                             description={work.description}
@@ -128,7 +127,6 @@ const LeftNav = () => {
                                 description={project.description}
                                 location={project.location}
                                 dates={project.dates}
-                              
                                 links={project.links}
                               />
                             </BlurFade>
@@ -140,51 +138,87 @@ const LeftNav = () => {
                 </div>
               ) : item.value == '2' ? (
                 <h4 className='text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8'>
-                  Menu
+                  <section id='contact'>
+                    <div className='grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12'>
+                      <BlurFade delay={BLUR_FADE_DELAY * 16}>
+                        <div className='space-y-3'>
+                          <h2 className='text-3xl font-bold tracking-tighter sm:text-5xl'>
+                            Get in Touch
+                          </h2>
+                          <p className='mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'>
+                            Want to chat? Just shoot me a dm{' '}
+                            <Link
+                              href={'https://www.facebook.com/SarcasmIzLit/'}
+                              className='text-blue-500 hover:underline'
+                            >
+                              with a direct question on facebook
+                            </Link>{' '}
+                            and I&apos;ll respond whenever I can. I will ignore all soliciting.
+                          </p>
+                          <div className=' border flex flex-col items-center   w-full'>
+                            <div className='flex items-center  gap-5'>
+                              <h4 className='text-left text-lg font-bold tracking-tighter '>
+                                Email:
+                              </h4>
+                              <a
+                                href='mailto:jsantosvee@gmail.com'
+                                className='text-sm font-normal tracking-tighter'
+                              >
+                                jsantosvee@gmail.com
+                              </a>
+                            </div>
+                            <div className='flex items-center  gap-5'>
+                              <h4 className='text-left text-lg font-bold tracking-tighter '>
+                                Github:
+                              </h4>
+                              <a
+                                href='https://github.com/Ozzie-code-alt?tab=repositories'
+                                className='text-sm font-normal tracking-tighter'
+                              >
+                                Ozzie-code-alt
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </BlurFade>
+                    </div>
+                  </section>
                 </h4>
               ) : (
                 <h4 className='text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8'>
                   Projects
-              <div className='flex justify-center items-center'>
-                {images.map((image, idx) => (
-                  <motion.div
-                    key={'images' + idx}
-                    style={{
-                      rotate: Math.random() * 20 - 10
-                    }}
-                    whileHover={{
-                      scale: 1.1,
-                      rotate: 0,
-                      zIndex: 100
-                    }}
-                    whileTap={{
-                      scale: 1.1,
-                      rotate: 0,
-                      zIndex: 100
-                    }}
-                    className='rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 flex-shrink-0 overflow-hidden'
-                  >
-                    <Image
-                      src={image}
-                      alt='bali images'
-                      width='500'
-                      height='500'
-                      className='rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0'
-                    />
-                  </motion.div>
-                ))}
-              </div>
+                  <div className='flex justify-center items-center'>
+                    {images.map((image, idx) => (
+                      <motion.div
+                        key={'images' + idx}
+                        style={{
+                          rotate: Math.random() * 20 - 10
+                        }}
+                        whileHover={{
+                          scale: 1.1,
+                          rotate: 0,
+                          zIndex: 100
+                        }}
+                        whileTap={{
+                          scale: 1.1,
+                          rotate: 0,
+                          zIndex: 100
+                        }}
+                        className='rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 flex-shrink-0 overflow-hidden'
+                      >
+                        <Image
+                          src={image}
+                          alt='bali images'
+                          width='500'
+                          height='500'
+                          className='rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover flex-shrink-0'
+                        />
+                      </motion.div>
+                    ))}
+                  </div>
                 </h4>
               )}
             </ModalContent>
-            <ModalFooter className='gap-4'>
-              <button className='px-2 py-1 bg-gray-200 text-black dark:bg-black dark:border-black dark:text-white border border-gray-300 rounded-md text-sm w-28'>
-                Cancel
-              </button>
-              <button className='bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28'>
-                Book Now
-              </button>
-            </ModalFooter>
           </ModalBody>
         </Modal>
       ))}
