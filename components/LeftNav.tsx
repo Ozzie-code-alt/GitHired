@@ -139,7 +139,7 @@ const LeftNav = () => {
               ) : item.value == '2' ? (
                 <h4 className='text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8'>
                   <section id='contact'>
-                    <div className='grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full py-12'>
+                    <div className='grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full pt-12'>
                       <BlurFade delay={BLUR_FADE_DELAY * 16}>
                         <div className='space-y-3'>
                           <h2 className='text-3xl font-bold tracking-tighter sm:text-5xl'>
@@ -155,7 +155,7 @@ const LeftNav = () => {
                             </Link>{' '}
                             and I&apos;ll respond whenever I can. I will ignore all soliciting.
                           </p>
-                          <div className=' border flex flex-col items-center   w-full'>
+                          <div className='flex flex-col  gap-2 w-full'>
                             <div className='flex items-center  gap-5'>
                               <h4 className='text-left text-lg font-bold tracking-tighter '>
                                 Email:
@@ -176,6 +176,17 @@ const LeftNav = () => {
                                 className='text-sm font-normal tracking-tighter'
                               >
                                 Ozzie-code-alt
+                              </a>
+                            </div>
+                            <div className='flex items-center  gap-5'>
+                              <h4 className='text-left text-lg font-bold tracking-tighter '>
+                                Linkedin:
+                              </h4>
+                              <a
+                                href='https://www.linkedin.com/in/justin-r-santos/'
+                                className='text-sm font-normal tracking-tighter'
+                              >
+                                Justin Santos
                               </a>
                             </div>
                           </div>
