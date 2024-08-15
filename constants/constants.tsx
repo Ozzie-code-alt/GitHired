@@ -466,3 +466,65 @@ export const DATA = {
     }
   ]
 } as const;
+
+export const PROJECTNAV = {
+  project: [
+    {
+      company: 'Prometheus',
+      href: 'https://www.prometheus.ph',
+      badges: [],
+      location: 'Remote',
+      title: 'Associate Software Engineer',
+      logoUrl: '/atomic.png',
+      start: 'September 15 2023',
+      end: 'Present',
+      description:
+        'As an Associate Software Engineer at Prometheus, I handle full-stack website development, leveraging Next JS for front-end enhancements and MongoDB, Postgres, and Express for back-end systems. Additionally, I create engaging AR filters using Meta Spark Studio for various events and celebrations. Furthermore, I contribute to the design, optimization, and development of mobile applications with React Native and Expo.'
+    },
+    {
+      company: 'Freelance Developer',
+      badges: [],
+      location: 'Remote',
+      title: 'Software Engineer',
+      logoUrl: '/shopify.svg',
+      start: 'June 2022',
+      end: 'Present',
+      description:
+        'As a Freelance/Part-Time Developer, I have worked on projects involving NextJS, MongoDB Atlas/Compass, Prisma, and Cloudinary. Notable projects include developing a feedback form system with facial recognition capabilities for a school using Python, Flask, and Selenium, and creating a cross-platform student monitoring system with NextJS and MongoDB. I primarily handle thesis projects part-time, maintaining effective communication with students to ensure their successful completion.'
+    },
+    {
+      company: 'Daily Guardian',
+      href: 'https://dailyguardian.com.ph',
+      badges: [],
+      location: 'Santa Clara, CA',
+      title: 'Web Developer Intern',
+      logoUrl: '/nvidia.png',
+      start: 'February 16 2024',
+      end: 'May 27 2024',
+      description:
+        "I actively participated in the updates and modifications of the Daily Guardian website, collaborating closely with fellow developers and designers. My responsibilities included front-end development using Astro, ensuring the website's responsiveness and user-friendliness across all devices and platforms."
+    },
+    {
+      company: 'Google Developer Student Club',
+      badges: [],
+      location: 'Santa Clara, CA',
+      title: 'Software Developer Volunteer',
+      logoUrl: '/nvidia.png',
+      start: 'November 2021',
+      end: 'January 2024',
+      description:
+        'As the Technical Vice Lead for the Google Developer Student Club, I have undertaken projects involving NextJS, MongoDB Atlas/Compass, Prisma, and Cloudinary. Notable projects include developing a feedback form system with facial recognition capabilities for a school using Python, Flask, and Selenium, and creating a cross-platform student monitoring system with NextJS and MongoDB. I also lead and mentor club members, maintaining effective communication to ensure the successful completion of various technical projects and initiatives.'
+    },
+    {
+      company: 'DevCon',
+      badges: [],
+      location: 'Santa Clara, CA',
+      title: 'Software Developer Volunteer',
+      logoUrl: '/nvidia.png',
+      start: 'July 2023',
+      end: 'June 2024',
+      description:
+        ' At DevCon I am passionate about innovation and take pride in having designed and implemented an AI-powered photo booth, which has significantly enhanced event experiences by capturing memorable moments with cutting-edge technology. Ive also been actively involved in events like DevCon Kids and Game On, contributing to their success and engaging with diverse audiences.'
+    }
+  ]
+} as const;

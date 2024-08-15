@@ -10,13 +10,13 @@ import Link from "next/link";
 import React from "react";
 
 interface ResumeCardProps {
-  logoUrl: string;
+  logoUrl?: string;
   altText: string;
-  title: string;
+  title?: string;
   subtitle?: string;
   href?: string;
   badges?: readonly string[];
-  period: string;
+  period?: string;
   description?: string;
 }
 export const ResumeCard = ({
