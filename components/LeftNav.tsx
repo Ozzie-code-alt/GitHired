@@ -2,12 +2,11 @@ import { DATA, LEFTNAV_CONSTANTS, PROJECTNAV } from '@/constants/constants';
 import React from 'react';
 import { Modal, ModalBody, ModalContent, ModalTrigger } from './Modal';
 
-
 import BlurFade from './sub-components/blur-fade';
 import { ResumeCard } from './resume-card';
 import { HackathonCard } from './sub-components/hackathoncard';
 import Link from 'next/link';
-import BoxReveal from './sub-components/animatedBoxtext';
+import ProjectContainer from './sub-components/projectContainer';
 
 const LeftNav = () => {
   const BLUR_FADE_DELAY = 0.04;
@@ -37,11 +36,11 @@ const LeftNav = () => {
                 </h4>
               ) : item.value == '2' ? (
                 <h4 className='text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8'>
-                  Contact
+                
                 </h4>
               ) : (
                 <h4 className='text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8'>
-                  Projects
+                 Other Projects / Not Hosted
                 </h4>
               )}
 
@@ -136,10 +135,10 @@ const LeftNav = () => {
                     <div className='grid items-center justify-center gap-4 px-4 text-center md:px-6 w-full pt-12'>
                       <BlurFade delay={BLUR_FADE_DELAY * 16}>
                         <div className='space-y-3'>
-                          <h2 className='text-3xl font-bold tracking-tighter sm:text-5xl'>
+                          <h2 className='text-3xl font-sans font-bold tracking-tighter sm:text-5xl'>
                             Get in Touch
                           </h2>
-                          <p className='mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'>
+                          <p className='mx-auto font-sans font-semibold max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'>
                             Want to chat? Just shoot me a dm{' '}
                             <Link
                               href={'https://www.facebook.com/SarcasmIzLit/'}
@@ -192,11 +191,21 @@ const LeftNav = () => {
               ) : (
                 <h4 className='text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8'>
                   {/*TODO:Make Box Reveal Component Here */}
-                  <BoxReveal boxColor={'gray'} duration={0.5}>
+                  {/* <BoxReveal boxColor={'gray'} duration={0.5}>
                     <p className='text-[1rem] font-semibold'>
-                      Some Text Here <span className='text-black'>.</span>
+                     Aeolian <span className='text-black'>.</span>
                     </p>
-                  </BoxReveal>
+                  </BoxReveal> */}
+                  <div className='flex flex-col gap-5'>
+                    {PROJECTNAV.map((value, index) => (
+                      <ProjectContainer
+                        key={index}
+                        title={value.title}
+                        link={value.link}
+                        description={value.description}
+                      />
+                    ))}
+                  </div>
                 </h4>
               )}
             </ModalContent>
