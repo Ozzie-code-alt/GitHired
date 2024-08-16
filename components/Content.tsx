@@ -9,7 +9,6 @@ import dynamic from 'next/dynamic';
 import { PiSunLight } from 'react-icons/pi';
 import { motion } from 'framer-motion';
 import { slideInFromBottom } from '@/lib/utils';
-import LittleMascot from './LittleMascot';
 const Content = () => {
   const [first, setfirst] = useState<string[]>([]);
   const [mode, setMode] = useState('light');
@@ -22,7 +21,7 @@ const Content = () => {
     setMode((prevMode) => {
       const newMode = prevMode === 'light' ? 'dark' : 'light';
       localStorage.setItem('Mode', newMode);
-      window.dispatchEvent(new Event('storage')); 
+      window.dispatchEvent(new Event('storage'));
       return newMode;
     });
   };
@@ -83,7 +82,6 @@ const Content = () => {
 
           <div className=' flex  gap-5  w-fit  justify-center items-center '>
             <Footer />
-            <LittleMascot />
           </div>
         </div>
       </div>
@@ -91,7 +89,6 @@ const Content = () => {
       <div className='w-full flex flex-col gap-5 px-3 sm:px-10  '>
         <RightPage first={first} />
       </div>
-
       <div className='absolute group w-full  hidden  lg:flex flex-col justify-center items-center bottom-32'>
         <div className='opacity-0  group-hover:opacity-100 duration-500 flex justify-center transition ease-in-out'>
           <DockDemo />
