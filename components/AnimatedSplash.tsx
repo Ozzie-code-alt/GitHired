@@ -32,7 +32,7 @@ const AnimatedSplash = () => {
       >
         <img src='/bg-blur-cp.png' alt='' className='h-full w-full scale-[2]' />
       </motion.div>
-      <div className='absolute top-0 left-0 right-0 h-full w-full'>
+      {/* <div className='absolute top-0 left-0 right-0 h-full w-full'>
         <div className='flex h-full w-full items-center justify-center'>
           <motion.div
             initial={{ x: -700, opacity: 0 }}
@@ -48,8 +48,8 @@ const AnimatedSplash = () => {
             JUSTIN
           </motion.div>
         </div>
-      </div>
-      <div className='absolute top-0 left-0 right-0 h-full w-full'>
+      </div> */}
+      {/* <div className='absolute top-0 left-0 right-0 h-full w-full'>
         <div className='flex h-full w-full items-center justify-center'>
           <motion.div
             initial={{ opacity: 0, x: 700 }}
@@ -65,22 +65,8 @@ const AnimatedSplash = () => {
             SANTOS
           </motion.div>
         </div>
-      </div>
-      {/* <div className='absolute top-0 left-0 right-0 h-full w-full'>
-        <motion.div
-          initial={{ scale: 4, opacity: 0, rotate: 20 }}
-          animate={{ scale: 1, opacity: 1, rotate: 0 }}
-          transition={{
-            ease: 'easeInOut',
-            type: 'spring',
-            duration: 2.2,
-            delay: 5.0
-          }}
-          className='flex h-full w-full items-center justify-center'
-        >
-          <img src='/shoes.png' alt='' className='mr-10 w-[1150px]' />
-        </motion.div>
       </div> */}
+
     </div>
   );
 };

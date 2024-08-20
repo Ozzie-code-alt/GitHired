@@ -4,26 +4,31 @@ import Navbar from '@/components/Navbar';
 import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 export default function Home() {
-  const [timer, setTimer] = useState(false);
+  // const [timer, setTimer] = useState(false);
   const ContentDynamic = dynamic(() => import('../components/Content'), { ssr: false });
-  useEffect(() => {
-    const timedOut = () => {
-      setTimeout(() => {
-        setTimer(true);
-      }, 8000);
-    };
+  // useEffect(() => {
+  //   const timedOut = () => {
+  //     setTimeout(() => {
+  //       setTimer(true);
+  //     }, 4000);
+  //   };
 
-    timedOut();
-  }, [timer]);
+  //   timedOut();
+  // }, [timer]);
 
   return (
     <main className='flex dark:bg-black  relative justify-center  '>
       <div className=' w-full relative  '>
-        <div className={` ${timer === true ? 'hidden' : 'flex'}`}>
+        {/* <div className={` ${timer === true ? 'hidden' : 'flex'}`}>
           <AnimatedSplash />
-        </div>
+        </div> */}
 
-        <div className={` ${timer === true ? 'lg:flex' : 'hidden'}`}>
+        {/* <div className={` ${timer === true ? 'lg:flex' : 'hidden'}`}>
+          <Navbar />
+          <ContentDynamic />
+        </div> */}
+
+        <div className={` 'lg:flex' : 'hidden'}`}>
           <Navbar />
           <ContentDynamic />
         </div>
