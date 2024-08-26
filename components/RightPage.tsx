@@ -6,7 +6,6 @@ import Image from 'next/image';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
 import { slideInFromBottom } from '@/lib/utils';
-import { useRouter } from 'next/navigation';
 import { Divz } from 'divz';
 interface RightPageProps {
   first: string[];
@@ -21,12 +20,12 @@ const RightPage = ({ first }: RightPageProps) => {
     inViews.current = inViews.current.slice(0, PROJECTS_CONSTANTS.length).fill(false);
   }, []);
 
-  const router = useRouter();
+ 
   return (
     <div className='h-screen '>
       {first.length > 0 ? (
-        <div className='sm:px-14'>
-          <div className='flex h-fit w-full transition duration-1000 ease-in-out justify-end pb-5 gap-5'>
+        <div className='sm:px-14 pb-40 overflow-y-auto  h-screen '>
+          <div className='flex w-full transition duration-1000 ease-in-out justify-end  gap-10'>
             {first.map((item, index) => (
               <div key={index} className='bg-[#FFDDD2] px-2 rounded-md'>
                 {item}
@@ -34,7 +33,7 @@ const RightPage = ({ first }: RightPageProps) => {
             ))}
           </div>
 
-          <div className='flex flex-col gap-5 h-auto'>
+          <div className='flex flex-col pt-5 gap-10'>
             {PROJECTS_CONSTANTS.filter((item) => item.tags.some((tag) => first.includes(tag))).map(
               (item, index) => {
                 const [ref, inView] = useInView({
@@ -53,15 +52,14 @@ const RightPage = ({ first }: RightPageProps) => {
                     key={index}
                     className='border hover:border-none relative group flex flex-col justify-center items-center rounded-lg h-auto'
                   >
-                    <a href={`/projects/${index}`} target='#blank'>
-                    <Image
-                      src={item.img}
-                      alt='justin'
-                      width={1080}
-                      height={1020}
-                      className='object-contain bg-contain bg-center object-center shadow-2xl cursor-pointer  group-hover:scale-105 transition-all duration-500 ease-in-out rounded-t-lg'
-                    />
-                  </a>
+                      <Image
+                        src={item.img}
+                        alt='justin'
+                        width={1080}
+                        height={1020}
+                        className='object-contain bg-contain bg-center object-center shadow-2xl   group-hover:scale-105 transition-all duration-500 ease-in-out rounded-t-lg'
+                      />
+                   
                     <div
                       className={`flex gap-5 px-2 rounded-lg group-hover:opacity-0 duration-500 ease-out transition-all left-5 bottom-20 absolute ${item.value === '1' ? 'bg-[#D3D2FF]' : item.value === '2' ? 'bg-[#FFDDD2]' : item.value === '3' ? 'bg-[#D2FFF2]' : 'bg-[#D2F7FF]'}`}
                     >
@@ -82,10 +80,10 @@ const RightPage = ({ first }: RightPageProps) => {
           </div>
         </div>
       ) : (
-        <div className='relative w-full  lg:h-[100%]   '>
+        <div className='relative w-full lg:h-[100%]'>
           <small className='text-gray-500'>Made by justin With Blood Sweat and Tears - 2023</small>
           <Divz
-            className='transition-all lg:border-l hidden lg:flex border-dotted bg-none  border-gray-500 mb-5  duration-500   '
+            className='transition-all lg:border-l hidden  lg:flex border-dotted bg-none  border-gray-500 mb-5  duration-500   '
             autoPlay={true}
             autoPlayDuration={7000}
             // isDarkMode={true}
@@ -128,14 +126,6 @@ const RightPage = ({ first }: RightPageProps) => {
                   >
                     {item.tags.join(', ')}
                   </div>
-                  {/* <div className='flex justify-between border-l-2 group-hover:bg-black group-hover:text-white  duration-500 ease-out transition-all border-b-2 border-r-2 border-gray-500 rounded-b-lg px-5 py-5 w-full'>
-                    <div className='dark:text-white'>{item.title}</div>
-                    <div className='dark:text-white'>
-                      <a href={item.route} target='_blank'>
-                        <button>View Project</button>
-                      </a>
-                    </div>
-                  </div> */}
                 </div>
               );
             })}

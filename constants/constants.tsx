@@ -351,12 +351,24 @@ export const ProjectData = [
 export const DATA = {
   work: [
     {
+      company: 'i-cube Digital Solutions',
+      href: 'https://www.prometheus.ph',
+      badges: [],
+      location: 'Remote',
+      title: 'Software Engineer',
+      logoUrl: '',
+      start: 'August 10 2024',
+      end: 'Present',
+      description:
+        'As a Software Engineer at i-cube Digital Solutions, I specialize in building dynamic websites using React and Next.js for the front-end, while managing robust back-end systems with C#, Postgres, and Prisma. Additionally, I develop mobile applications using React Native, ensuring seamless performance across platforms. My role involves not only coding but also optimizing and enhancing both web and mobile applications to deliver high-quality user experiences.'
+    },
+    {
       company: 'Prometheus',
       href: 'https://www.prometheus.ph',
       badges: [],
       location: 'Remote',
       title: 'Associate Software Engineer',
-      logoUrl: '/atomic.png',
+      logoUrl: '',
       start: 'September 15 2023',
       end: 'Present',
       description:
@@ -367,7 +379,7 @@ export const DATA = {
       badges: [],
       location: 'Remote',
       title: 'Software Engineer',
-      logoUrl: '/shopify.svg',
+      logoUrl: '',
       start: 'June 2022',
       end: 'Present',
       description:
@@ -379,7 +391,7 @@ export const DATA = {
       badges: [],
       location: 'Santa Clara, CA',
       title: 'Web Developer Intern',
-      logoUrl: '/nvidia.png',
+      logoUrl: '',
       start: 'February 16 2024',
       end: 'May 27 2024',
       description:
@@ -390,7 +402,7 @@ export const DATA = {
       badges: [],
       location: 'Santa Clara, CA',
       title: 'Software Developer Volunteer',
-      logoUrl: '/nvidia.png',
+      logoUrl: '',
       start: 'November 2021',
       end: 'January 2024',
       description:
@@ -401,7 +413,7 @@ export const DATA = {
       badges: [],
       location: 'Santa Clara, CA',
       title: 'Software Developer Volunteer',
-      logoUrl: '/nvidia.png',
+      logoUrl: '',
       start: 'July 2023',
       end: 'June 2024',
       description:
@@ -413,7 +425,7 @@ export const DATA = {
       school: 'Central Philippine University ',
       href: 'https://cpu.edu.ph',
       degree: "Bachelor's Degree of Computer Science (BCS)",
-      logoUrl: '/waterloo.png',
+      logoUrl: '',
       start: 'January 2020',
       end: 'June 2024'
     }
@@ -422,22 +434,39 @@ export const DATA = {
     {
       title: 'Google Gemini API Developer ',
       dates: 'May 14 - September 4, 2024',
-      location: 'USA',
+      location: 'Remote - Philippines',
       description:
-        'Developed a mobile application which delivered bedtime stories to children using augmented reality.',
+        'Problocks is an educational platform that teaches kids coding through a combination of interactive paper blocks and verbal instructions. It offers a hands-on approach by using camera recognition and voice commands to translate physical actions into digital code.',
       image: 'https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-western.png',
       mlh: 'https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg',
-      links: []
+      links: [
+        {
+          title: 'Github',
+          icon: <Icons.github className='h-4 w-4' />,
+          href: 'https://github.com/WeAreBuildingStuff/Problocks-final'
+        },
+        {
+          title: 'Live Link',
+          icon: <Icons.globe className='h-4 w-4' />,
+          href: 'https://problocks-frontend.vercel.app/'
+        }
+      ]
     },
     {
       title: 'Microsoft Imagine Cup',
       dates: 'December 3rd - April 30th , 2022 - 2023',
       location: 'Manila, Philippines',
       description:
-        'Developed a mobile application which delivers university campus wide events in real time to all students.',
+        'Whiteboard is a project developed for the Microsoft Imagine Cup that serves as an online collaborative platform. It allows users to brainstorm, draw, and share ideas in real-time, supporting teamwork and creativity in a digital space.',
       image: 'https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-the-north.png',
       mlh: 'https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg',
-      links: []
+      links: [
+        {
+          title: 'Github',
+          icon: <Icons.github className='h-4 w-4' />,
+          href: 'https://github.com/Ozzie-code-alt/WhiteboardMicrosoftImagineCup'
+        }
+      ]
     },
     {
       title: 'DOST FLExPhD Hackathon',
@@ -454,13 +483,18 @@ export const DATA = {
       dates: 'October , 2022',
       location: 'Iloilo, Philippines',
       description:
-        'Developed a web application which aggregates social media data regarding cryptocurrencies and predicts future prices.',
+        'Developed a web application for a bible mobile app provides easy access to scriptures, daily verses, and study tools, allowing users to engage with their faith on the go. The app features a user-friendly interface designed for convenient Bible reading and exploration on mobile devices.',
       image: 'https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/developer-week.jpg',
       links: [
         {
           title: 'Github',
           icon: <Icons.github className='h-4 w-4' />,
-          href: 'https://github.com/cryptotrends/cryptotrends'
+          href: 'https://github.com/Ozzie-code-alt/HackathonWebsite'
+        },
+        {
+          title: 'Live Link',
+          icon: <Icons.globe className='h-4 w-4' />,
+          href: 'https://hackathon-website-gilt.vercel.app/'
         }
       ]
     }

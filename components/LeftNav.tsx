@@ -32,7 +32,7 @@ const LeftNav = () => {
             <ModalContent>
               {item.value == '1' ? (
                 <h4 className='text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8'>
-                  Experience
+          
                 </h4>
               ) : item.value == '2' ? (
                 <h4 className='text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8'>
