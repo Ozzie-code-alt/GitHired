@@ -471,21 +471,26 @@ export const PROJECTNAV = [
   {
     title: 'Aeolian',
     description: 'Touchable interface as an cheap alternative to Smart Whiteboards',
-    link:"https://github.com/Ozzie-code-alt/Aeolian"
+    link: 'https://github.com/Ozzie-code-alt/Aeolian'
   },
   {
     title: 'Warp IU',
     description: 'Javascript Component Library / NPM Package',
-    link:"https://www.npmjs.com/package/@ozzie-code-alt/warp-ui"
+    link: 'https://www.npmjs.com/package/@ozzie-code-alt/warp-ui'
   },
   {
     title: 'M.E.T.H',
     description: 'Mongo Express Typescript HTMX / Npm Package',
-    link:"https://www.npmjs.com/package/justinmeth"
+    link: 'https://www.npmjs.com/package/justinmeth'
   },
   {
     title: 'Gesture Photobooth',
     description: 'Iloilo Game on project trained with mediapipe and uses Meta Spark for filters',
-    link:"https://github.com/Ozzie-code-alt/GameConIloILO"
+    link: 'https://github.com/Ozzie-code-alt/GameConIloILO'
+  },
+  {
+    title: 'Golden Lions Automated Email - deprecated',
+    description: 'Automated email response for Golden Lion Esports using Appscript and Javascript',
+    link: 'https://github.com/Ozzie-code-alt/emaiilAutomationGLE'
   }
 ] as const;
