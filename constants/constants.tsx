@@ -83,7 +83,7 @@ export const FOOTER_CONSTANTS = [
 
 export const PROJECTS_CONSTANTS = [
   {
-    title: 'JCI Regatta Origanization',
+    title: 'JCI Regatta ',
     img: '/Projects/JCI1.webp',
     tags: ['Astro', 'Tailwind'],
     value: '2',

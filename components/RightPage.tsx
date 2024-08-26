@@ -53,16 +53,15 @@ const RightPage = ({ first }: RightPageProps) => {
                     key={index}
                     className='border hover:border-none relative group flex flex-col justify-center items-center rounded-lg h-auto'
                   >
+                    <a href={`/projects/${index}`} target='#blank'>
                     <Image
                       src={item.img}
                       alt='justin'
                       width={1080}
-                      height={720}
-                      className='object-cover shadow-2xl cursor-pointer group-hover:scale-105 transition-all duration-500 ease-in-out rounded-t-lg'
-                      onClick={() => {
-                        router.push(`/projects/${index}`);
-                      }}
+                      height={1020}
+                      className='object-contain bg-contain bg-center object-center shadow-2xl cursor-pointer  group-hover:scale-105 transition-all duration-500 ease-in-out rounded-t-lg'
                     />
+                  </a>
                     <div
                       className={`flex gap-5 px-2 rounded-lg group-hover:opacity-0 duration-500 ease-out transition-all left-5 bottom-20 absolute ${item.value === '1' ? 'bg-[#D3D2FF]' : item.value === '2' ? 'bg-[#FFDDD2]' : item.value === '3' ? 'bg-[#D2FFF2]' : 'bg-[#D2F7FF]'}`}
                     >
@@ -140,8 +139,6 @@ const RightPage = ({ first }: RightPageProps) => {
                 </div>
               );
             })}
-
-          
           </Divz>
           <div className='transition-all flex lg:hidden pb-40 lg:border-l border-slate-500 mb-5  flex-col gap-20 duration-500  sm:px-14 ease-in-out'>
             {PROJECTS_CONSTANTS.map((item, index) => {
@@ -162,16 +159,15 @@ const RightPage = ({ first }: RightPageProps) => {
                   className='border hover:border-none relative group flex flex-col justify-center items-center rounded-lg h-auto'
                   id={item.transition}
                 >
-                  <Image
-                    src={item.img}
-                    alt='justin'
-                    width={1080}
-                    height={720}
-                    className='object-cover shadow-2xl cursor-pointer group-hover:scale-105 transition-all duration-500 ease-in-out rounded-t-lg'
-                    onClick={() => {
-                      router.push(`/projects/${index}`);
-                    }}
-                  />
+                  <a href={`/projects/${index}`} target='#blank'>
+                    <Image
+                      src={item.img}
+                      alt='justin'
+                      width={1080}
+                      height={1020}
+                      className='object-contain bg-contain bg-center object-center shadow-2xl cursor-pointer  group-hover:scale-105 transition-all duration-500 ease-in-out rounded-t-lg'
+                    />
+                  </a>
                   <div
                     className={`flex gap-5 px-2 rounded-lg group-hover:opacity-0 duration-500 ease-out transition-all left-5 bottom-20 absolute ${
                       item.value === '1'
@@ -196,7 +192,6 @@ const RightPage = ({ first }: RightPageProps) => {
                 </motion.div>
               );
             })}
-       
           </div>
         </div>
       )}
