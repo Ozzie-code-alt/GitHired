@@ -31,16 +31,12 @@ const LeftNav = () => {
           <ModalBody>
             <ModalContent>
               {item.value == '1' ? (
-                <h4 className='text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8'>
-          
-                </h4>
+                <h4 className='text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8'></h4>
               ) : item.value == '2' ? (
-                <h4 className='text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8'>
-                
-                </h4>
+                <h4 className='text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8'></h4>
               ) : (
                 <h4 className='text-lg md:text-2xl text-neutral-600 dark:text-neutral-100 font-bold text-center mb-8'>
-                 Other Projects / Not Hosted
+                  More Projects / Not Hosted
                 </h4>
               )}
 
