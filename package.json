@@ -23,6 +23,7 @@
     "framer-motion": "^11.2.10",
     "gsap": "^3.12.5",
     "gsap-trial": "^3.12.5",
+    "ipad-cursor": "^0.5.2",
     "lint-staged": "^15.2.7",
     "lottie-web": "^5.12.2",
     "lucide-react": "^0.416.0",

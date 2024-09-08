@@ -1621,6 +1621,11 @@ internal-slot@^1.0.7:
     hasown "^2.0.0"
     side-channel "^1.0.4"
 
+ipad-cursor@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/ipad-cursor/-/ipad-cursor-0.5.2.tgz#dd4fea0b2d07e6bdc697d46bc8c37b86a8230947"
+  integrity sha512-RC8ib+wtOzvi0gsuINYnn2lfALmLBsnrabyShyTSaaPupzILLoDfVqowiWIajeiBdml8JC09C/V025pBH+FH2Q==
+
 is-array-buffer@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/is-array-buffer/-/is-array-buffer-3.0.4.tgz#7a1f92b3d61edd2bc65d24f130530ea93d7fae98"
