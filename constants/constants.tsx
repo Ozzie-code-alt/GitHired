@@ -64,6 +64,10 @@ export const CHECKBOXES_CONSTANTS = [
     value: '1'
   },
   {
+    title: 'Firebase',
+    value: '3'
+  },
+  {
     title: 'Elementor',
     value: '4'
   }
@@ -85,7 +89,7 @@ export const PROJECTS_CONSTANTS = [
   {
     title: 'JCI Regatta ',
     img: '/Projects/JCI1.webp',
-    tags: ['Astro', 'Tailwind'],
+    tags: ['Astro', 'Tailwind', 'Firebase'],
     value: '2',
     route: 'https://jci-regatta-iloilo-astro.vercel.app/',
     transition: 'Effect2'
